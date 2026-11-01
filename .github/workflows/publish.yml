@@ -66,8 +66,8 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           version="$(node -p "require('./package.json').version")"
-          if npm view "dsh-tuneup@${version}" version >/dev/null 2>&1; then
-            echo "dsh-tuneup@${version} is already published; skipping npm publish"
+          if npm view "dsh-clinic@${version}" version >/dev/null 2>&1; then
+            echo "dsh-clinic@${version} is already published; skipping npm publish"
             exit 0
           fi
 
@@ -108,7 +108,7 @@ jobs:
             # Still refuse to report a release that published nothing — the guard
             # this workflow has always had. The message names both causes so the
             # next person does not have to rediscover them.
-            echo "::error::npm publish failed by both paths. Either refresh NPM_TOKEN, or configure a GitHub Actions trusted publisher for dsh-tuneup on npmjs.com (see the token rotation checklist, section 7)."
+            echo "::error::npm publish failed by both paths. Either refresh NPM_TOKEN, or configure a GitHub Actions trusted publisher for dsh-clinic on npmjs.com (see the token rotation checklist, section 7)."
             exit 1
           fi
       # Advisory only: npm's read side can lag minutes behind a successful publish, and a hard
@@ -118,14 +118,14 @@ jobs:
         run: |
           version="$(node -p "require('./package.json').version")"
           for attempt in $(seq 1 12); do
-            if npm view "dsh-tuneup@${version}" version >/dev/null 2>&1; then
-              echo "dsh-tuneup@${version} is live on the registry"
+            if npm view "dsh-clinic@${version}" version >/dev/null 2>&1; then
+              echo "dsh-clinic@${version} is live on the registry"
               exit 0
             fi
             echo "attempt ${attempt}: not visible on the registry yet; retrying"
             sleep 15
           done
-          echo "::warning::dsh-tuneup@${version} is still not visible on the registry after ~3 minutes (the publish step reported success; npm's read side is lagging)"
+          echo "::warning::dsh-clinic@${version} is still not visible on the registry after ~3 minutes (the publish step reported success; npm's read side is lagging)"
       # Resolve the tag explicitly. On a workflow_dispatch run the ref is the
       # branch name, which is not a tag, and action-gh-release then fails with
       # "GitHub Releases requires a tag" — after a successful publish, turning a

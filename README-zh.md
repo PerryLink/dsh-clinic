@@ -2,20 +2,20 @@
 
 > Release stamp: `0.4.6` (2026-10-04).
 
-> **包名说明。** 本项目的 npm 发布名是 **`dsh-tuneup`**。裸名 `dsh-plugin-doctor` 属于另一个无关项目——**永远不要用 `npx dsh-plugin-doctor`**，装它不会装到本插件。
+> **包名说明。** 本项目的 npm 发布名是 **`dsh-clinic`**。裸名 `dsh-plugin-doctor` 属于另一个无关项目——**永远不要用 `npx dsh-plugin-doctor`**，装它不会装到本插件。
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
-[![npm version](https://img.shields.io/npm/v/%40perrylink%2Fdsh-plugin-doctor)](https://www.npmjs.com/package/dsh-tuneup)
-[![npm downloads](https://img.shields.io/npm/dm/%40perrylink%2Fdsh-plugin-doctor)](https://www.npmjs.com/package/dsh-tuneup)
+[![npm version](https://img.shields.io/npm/v/%40perrylink%2Fdsh-plugin-doctor)](https://www.npmjs.com/package/dsh-clinic)
+[![npm downloads](https://img.shields.io/npm/dm/%40perrylink%2Fdsh-plugin-doctor)](https://www.npmjs.com/package/dsh-clinic)
 [![Node](https://img.shields.io/badge/node-%5E22.19%20%7C%7C%20%3E%3D24-brightgreen.svg)](#)
-[![CI](https://img.shields.io/github/actions/workflow/status/PerryLink/dsh-tuneup/ci.yml?branch=main&label=CI)](https://github.com/PerryLink/dsh-tuneup/actions)
-[![dshfind](https://dshfind.com/api/badge/PerryLink/dsh-tuneup?metric=downloads&lang=zh)](https://dshfind.com/zh/plugins/PerryLink/dsh-tuneup?ref=badge)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/PerryLink/dsh-tuneup/badge)](https://api.securityscorecards.dev/projects/github.com/PerryLink/dsh-tuneup)
+[![CI](https://img.shields.io/github/actions/workflow/status/PerryLink/dsh-clinic/ci.yml?branch=main&label=CI)](https://github.com/PerryLink/dsh-clinic/actions)
+[![dshfind](https://dshfind.com/api/badge/PerryLink/dsh-clinic?metric=downloads&lang=zh)](https://dshfind.com/zh/plugins/PerryLink/dsh-clinic?ref=badge)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/PerryLink/dsh-clinic/badge)](https://api.securityscorecards.dev/projects/github.com/PerryLink/dsh-clinic)
 
 [English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
 
 ```sh
-dsh plugin --profile <name> add dsh-tuneup
+dsh plugin --profile <name> add dsh-clinic
 ```
 
 
@@ -31,17 +31,17 @@ dsh 插件「完整性 + 运行流畅」一体检测器。零依赖（Node ≥22
 ## 安装（DSH bundle）
 
 ```sh
-dsh plugin --profile web add github:PerryLink/dsh-tuneup
+dsh plugin --profile web add github:PerryLink/dsh-clinic
 ```
 
 `dsh-plugin-doctor` 在 package.json 中声明 `dsh.bundle.patch` → `cordis.patch.yml`，因此也可以作为 DeepSeek Harness bundle 安装：
 
 ```powershell
 # git 渠道（最新 main）
-dsh plugin --profile web add github:PerryLink/dsh-tuneup
+dsh plugin --profile web add github:PerryLink/dsh-clinic
 
 # npm 渠道（正式发布版；务必使用 scoped 全名——裸名 dsh-plugin-doctor 是另一个项目）
-dsh plugin --profile web add dsh-tuneup
+dsh plugin --profile web add dsh-clinic
 ```
 
 插入的行按标准 Cordis 插件契约加载本包：宿主半区是一个导出 `apply(ctx)` 的纯 ESM 模块（需要服务时声明 `inject`）。本包不带浏览器 UI，因此没有 `dsh.client` 声明。
@@ -53,7 +53,7 @@ export function apply(ctx) {
 }
 ```
 
-卸载：`dsh plugin --profile web remove dsh-tuneup`（或从 profile patch 中删除该行）。上面的 CLI 用法不受影响。
+卸载：`dsh plugin --profile web remove dsh-clinic`（或从 profile patch 中删除该行）。上面的 CLI 用法不受影响。
 
 ## ⭐ 如果它帮到了你
 
@@ -74,7 +74,7 @@ dsh 插件「完整性 + 运行流畅」一体检测器。零依赖（Node ≥22
 
 ## Comparison
 
-![dsh-plugin-doctor 的实测对比柱状图](https://raw.githubusercontent.com/PerryLink/dsh-tuneup/main/docs/assets/dsh-plugin-doctor-evidence.png)
+![dsh-plugin-doctor 的实测对比柱状图](https://raw.githubusercontent.com/PerryLink/dsh-clinic/main/docs/assets/dsh-plugin-doctor-evidence.png)
 
 60 candidates → 20 qualifying plugins · scan dated 2026-09-10 (data/rk-scans.json)
 
@@ -169,9 +169,9 @@ node doctor.mjs --purge <隔离目录>              # 清理本工具产生的�
 
 ## 同名区分（重要）
 
-本仓是 **`dsh-tuneup`**，与生态里其他同名工具**不是同一个项目**：
+本仓是 **`dsh-clinic`**，与生态里其他同名工具**不是同一个项目**：
 
-- npm 裸名 `dsh-plugin-doctor` 属 **Xrainsmile/DSH-Plugin-Doctor**（另一个项目，0.1.1）。因此**永远不要用 `npx dsh-plugin-doctor`** —— 那会执行别人的包；请始终用 scoped 全名 `dsh-tuneup@<精确版本>`。
+- npm 裸名 `dsh-plugin-doctor` 属 **Xrainsmile/DSH-Plugin-Doctor**（另一个项目，0.1.1）。因此**永远不要用 `npx dsh-plugin-doctor`** —— 那会执行别人的包；请始终用 scoped 全名 `dsh-clinic@<精确版本>`。
 - GitHub 上名称含 `dsh-plugin-doctor` 的仓有 10 个（其中**恰同名者 8 个**），包括 `zoahdev/dsh-plugin-doctor`（GitHub-only，未发布到 npm）。
 - `dsh-testkit` 的 README 把 `dsh-plugin-doctor` 链向 zoahdev 的仓，与本仓无关。
 
@@ -191,11 +191,11 @@ node doctor.mjs --purge <隔离目录>              # 清理本工具产生的�
 挂这枚徽章的含义只有一条，且可审计：**该仓在自己的 CI 里跑 dsh-plugin-doctor 的静态 R+K 门禁（16 项：R0/R1/R3/R5/R6/R7/R8 + K1–K9），且门禁在默认分支当前 HEAD 上是绿的**。**不是**认证徽章：不含 Scorecard/provenance/安装冒烟。R2（tarball 完整性）与 R4（入口契约）读取构建产物 `lib/`，而家族多数仓的构建需要 `HARNESS_COMMIT` + `gen-aliases` 才能通过——这两项由各仓自己的 `ci.yml`（build drift gate + pack smoke）把关，不在本门禁内。
 
 ```markdown
-[![dsh-doctor](https://raw.githubusercontent.com/PerryLink/dsh-tuneup/main/badges/PerryLink__dsh-github.svg)](https://github.com/PerryLink/dsh-tuneup#verified-徽章)
+[![dsh-doctor](https://raw.githubusercontent.com/PerryLink/dsh-clinic/main/badges/PerryLink__dsh-github.svg)](https://github.com/PerryLink/dsh-clinic#verified-徽章)
 [![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
 ```
 
-- 注册表 `data/verified.json` 是唯一事实来源，由 `.github/workflows/verified.yml` 每日 + 每次相关 push 刷新。刷新只读 GitHub API：解析各仓 HEAD 的 `plugin-doctor.yml` 门禁配置（必须钉住 `dsh-tuneup@<版本>`、`--only` 参数可用、含 R0/K1 实跑自校验），再核对 HEAD 那次 `plugin-doctor` workflow run 的结论。**本仓 CI 不克隆、不安装、不执行任何第三方代码。**
+- 注册表 `data/verified.json` 是唯一事实来源，由 `.github/workflows/verified.yml` 每日 + 每次相关 push 刷新。刷新只读 GitHub API：解析各仓 HEAD 的 `plugin-doctor.yml` 门禁配置（必须钉住 `dsh-clinic@<版本>`、`--only` 参数可用、含 R0/K1 实跑自校验），再核对 HEAD 那次 `plugin-doctor` workflow run 的结论。**本仓 CI 不克隆、不安装、不执行任何第三方代码。**
 - 徽章外观：视觉语言对齐生态里较新的两枚徽章（`dsh.directory` 的等宽大写 + 字距 + 标记 + 渐变，`awesome-dsh-plugin` 的印章块）——**银白/铂金金属左段 + 盾牌勾标记 + 墨蓝等宽大写字**（金行主导、水行在字），右段是**整块 GitHub 惯例状态色**（绿/橙/红/灰）配等宽大写状态词，状态另用**路径绘制的图标**（✓ / ! / ✕ / –）冗余表达，色觉障碍下同样可读。5px 圆角 + 1px 描边；**描边是必需的**——去掉后银白左段在白色 README 背景上会消失。
 - 四种状态（值文本用 shields / GitHub Actions 惯用词）：`passing`（绿，HEAD 上 run success）/ `warning`（橙：HEAD 还没跑、run 仍在队列、或缺少门禁配置的前置条件）/ `failing`（红：HEAD 上 run 失败，或门禁配置不成立——含 `--only` 参数是双重编码乱码的"假门禁"）/ `no data`（灰：API 查询失败）。徽章是**动态**的：不再通过就会变红。R+K 的精确口径不在徽章文字里，而在本节与注册表 `meaning` 字段（徽章链接指回本节）。
 - 加入方式：向 `data/verified-repos.json` 提 PR 增加 `{ "repo": "<owner>/<name>", "package": "<npm 包名>" }`，并按下面的门禁在自己的仓里加 `plugin-doctor.yml`；条目必须通过上面的门禁核对。
@@ -205,7 +205,7 @@ node doctor.mjs --purge <隔离目录>              # 清理本工具产生的�
       - name: Run dsh-plugin-doctor (static R/K on the committed tree)
         run: |
           set +e
-          out="$(npx --yes dsh-tuneup@0.1.6 --repo . --no-smoke --only "R,K" --json /tmp/doctor.json 2>&1)"
+          out="$(npx --yes dsh-clinic@0.1.6 --repo . --no-smoke --only "R,K" --json /tmp/doctor.json 2>&1)"
           set -e
           printf '%s\n' "$out"
           echo "$out" | grep -q 'R0 ' || { echo "::error::doctor ran no R checks"; exit 1; }
@@ -292,11 +292,11 @@ version difference is reported as a note — most skills version independently.
 
 ## 状态
 
-正式仓库：GitHub `PerryLink/dsh-tuneup`（Apache-2.0），npm `dsh-tuneup`。
+正式仓库：GitHub `PerryLink/dsh-clinic`（Apache-2.0），npm `dsh-clinic`。
 **当前版本 0.2.0**（npm 上 0.2.0 之前的最新为 0.1.7），见 `CHANGELOG.md`。CI 用法（**请用 ASCII 别名**）：
 
 ```powershell
-npx --yes dsh-tuneup@0.2.0 --repo . --no-smoke --only "R,K"
+npx --yes dsh-clinic@0.2.0 --repo . --no-smoke --only "R,K"
 ```
 
 **37 个插件仓**已内置 `.github/workflows/plugin-doctor.yml`（只读已提交树 → `--only "R,K"` 静态门禁 + R0/K1 实跑自校验，pin `@0.1.6`）。
@@ -306,7 +306,7 @@ pin 停在 0.1.6 是有意的：0.2.0 对 R/K 两组的判据与输出形态**�
 
 ### 公开结果集
 
-- [`THIRD-PARTY-RK-SCAN.md`](https://github.com/PerryLink/dsh-tuneup/blob/main/THIRD-PARTY-RK-SCAN.md) —— 首份**第三方**（非 PerryLink）dsh 插件的静态 R+K 扫描：60 个候选 → 20 个真正声明 `dsh.bundle.patch` 的插件 → 16 项门禁下 **10 通过 / 10 失败**。方法：只读克隆、**零执行**第三方代码、R2/R4 单列不入门禁；含复现命令、本次扫描自身的方法学更正，以及**被点名仓的更正通道**。机器可读形态：`data/rk-scans.json`。
+- [`THIRD-PARTY-RK-SCAN.md`](https://github.com/PerryLink/dsh-clinic/blob/main/THIRD-PARTY-RK-SCAN.md) —— 首份**第三方**（非 PerryLink）dsh 插件的静态 R+K 扫描：60 个候选 → 20 个真正声明 `dsh.bundle.patch` 的插件 → 16 项门禁下 **10 通过 / 10 失败**。方法：只读克隆、**零执行**第三方代码、R2/R4 单列不入门禁；含复现命令、本次扫描自身的方法学更正，以及**被点名仓的更正通道**。机器可读形态：`data/rk-scans.json`。
   **它不是认证、不是评级，也不代表插件安全**：pass 仅表示「该 commit 上 16 项静态门禁未报失败」。
 
 ## PerryLink DSH Plugin Family
@@ -375,7 +375,7 @@ pin 停在 0.1.6 是有意的：0.2.0 对 R/K 两组的判据与输出形态**�
 | **[dsh-permit-report-check](https://github.com/PerryLink/dsh-permit-report-check)** |  |
 | **[dsh-pipeline-check](https://github.com/PerryLink/dsh-pipeline-check)** |  |
 | **[dsh-pleading-draft](https://github.com/PerryLink/dsh-pleading-draft)** |  |
-| **[dsh-plugin-doctor](https://github.com/PerryLink/dsh-tuneup)** |  |
+| **[dsh-plugin-doctor](https://github.com/PerryLink/dsh-clinic)** |  |
 | **[dsh-plugin-guide](https://github.com/PerryLink/dsh-plugin-guide)** |  |
 | **[dsh-plugin-kit](https://github.com/PerryLink/dsh-plugin-kit)** |  |
 | **[dsh-plugin-upgrade](https://github.com/PerryLink/dsh-plugin-upgrade)** |  |

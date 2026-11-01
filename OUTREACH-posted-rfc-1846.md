@@ -19,12 +19,12 @@ I hit the same class of bug from the other direction and it cost real damage. My
 
 I would argue for (2) if you want to hold the vocabulary at three — it needs no consumer change and cannot be mistaken for a verdict.
 
-**Testable today**, so this is not hypothetical. `dsh-tuneup` 0.3.1 emits both views from one run:
+**Testable today**, so this is not hypothetical. `dsh-clinic` 0.3.1 emits both views from one run:
 
 - `--format check` → the `dsh-doctor/v1` envelope with the three-value contract (exit 0/1/2). A `skip` becomes `WARN` **plus `skipped: true`**.
 - default → its own envelope: five statuses, and exit codes `3` infrastructure / `4` unsupported host / `5` unstable / `6` degraded.
 
-The projection is required never to change whether a project passes, and specifically never to render a `skip` as `PASS`. Both properties are asserted in `tests/compat.mjs`, and §1.1 of the spec makes them normative: https://github.com/PerryLink/dsh-tuneup/blob/main/SPEC.md
+The projection is required never to change whether a project passes, and specifically never to render a `skip` as `PASS`. Both properties are asserted in `tests/compat.mjs`, and §1.1 of the spec makes them normative: https://github.com/PerryLink/dsh-clinic/blob/main/SPEC.md
 
 One related point while the shape is open: `exit 2` currently means "not a plugin", but a run that **evaluated nothing** — a mistyped group, everything skipped, a host that would not install — has to share that code. Those are different facts about the world and a CI consumer acts differently on each. If `skipped` lands, the exit contract probably wants a matching value.
 

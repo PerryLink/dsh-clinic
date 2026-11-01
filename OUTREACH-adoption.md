@@ -25,7 +25,7 @@ For each candidate, run the gate yourself first, then write to them only if it
 surfaces something real:
 
 ```powershell
-npx --yes dsh-tuneup@0.4.0 --repo <their checkout> --no-smoke --only "R,K"
+npx --yes dsh-clinic@0.4.0 --repo <their checkout> --no-smoke --only "R,K"
 ```
 
 Then:
@@ -38,12 +38,12 @@ Then:
 >
 > I maintain the checker, so judge the finding on its merits — if it is wrong, I
 > would rather know, and the criteria are written down in
-> [SPEC.md](https://github.com/PerryLink/dsh-tuneup/blob/main/SPEC.md) so you
+> [SPEC.md](https://github.com/PerryLink/dsh-clinic/blob/main/SPEC.md) so you
 > can check the reasoning instead of trusting me. If it is useful and you want it to
 > stay caught, it is one line in CI:
 >
 > ```yaml
-> - uses: PerryLink/dsh-tuneup@v0.4.2
+> - uses: PerryLink/dsh-clinic@v0.4.2
 >   with:
 >     only: R,K
 > ```

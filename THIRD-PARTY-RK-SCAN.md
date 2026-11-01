@@ -38,7 +38,7 @@ means here".
 
 ## Scope — read this before citing anything below
 
-- **What was run**: `dsh-tuneup` **0.3.0**, groups **R** and
+- **What was run**: `dsh-clinic` **0.3.0**, groups **R** and
   **K**, `--no-smoke`. The gated set is every check **except `R2`/`R4`**, which
   read *built* artifacts and cannot be judged on an unbuilt clone.
 - **What was NOT run**: no install, no build, no boot, no runtime observation.
@@ -60,7 +60,7 @@ Every row records what a **static** check reported on **one commit**, and nothin
 more. If you maintain a repository listed here and believe a row is wrong — a
 stale clone, a file this heuristic mis-reads, a check that does not fit your
 layout — open an issue at
-[PerryLink/dsh-tuneup/issues](https://github.com/PerryLink/dsh-tuneup/issues)
+[PerryLink/dsh-clinic/issues](https://github.com/PerryLink/dsh-clinic/issues)
 with the reproduce command and your output. The row is re-run and this file is
 amended in place, with the same prominence as the original: **a wrong row is a
 defect of this tool, not a fact about your plugin.** Four checks have already
@@ -140,7 +140,7 @@ Or by hand, for a single target:
 
 ```bash
 git clone --depth 1 https://github.com/<owner>/<repo> /tmp/target
-npx --yes dsh-tuneup@<pinned> --repo /tmp/target --no-smoke --only "R,K" --json out.json
+npx --yes dsh-clinic@<pinned> --repo /tmp/target --no-smoke --only "R,K" --json out.json
 ```
 
 Machine-readable form: `data/rk-scans.json` is the **2026-09-10** record and is

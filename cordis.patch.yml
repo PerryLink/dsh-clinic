@@ -5,4 +5,4 @@
 # row — restate every key when overriding.
 - insert:
     - id: plugin-doctor
-      name: 'dsh-tuneup'
+      name: 'dsh-clinic'

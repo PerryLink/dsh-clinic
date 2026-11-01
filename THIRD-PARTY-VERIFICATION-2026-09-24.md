@@ -17,7 +17,7 @@ lets one repository's files leak into the next and silently corrupts the verdict
 then the published static gate:
 
 ```powershell
-npx --yes dsh-tuneup@0.4.4 --repo <checkout> --no-smoke --only "R,K"
+npx --yes dsh-clinic@0.4.4 --repo <checkout> --no-smoke --only "R,K"
 ```
 
 ## Result
