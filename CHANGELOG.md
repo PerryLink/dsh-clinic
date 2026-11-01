@@ -4,9 +4,9 @@
 
 ### Changed
 
-- Rename the package from `@perrylink/dsh-plugin-doctor` to `dsh-checkup` (the intended `dsh-clinic` was blocked by npm).
+- Rename the package from `@perrylink/dsh-plugin-doctor` to `dsh-tuneup` (npm blocked the `dsh-clinic`/`dsh-checkup` names as too similar to existing packages).
 - Keep `dsh-plugin-doctor` as a legacy bin alias.
-- New repository: https://github.com/PerryLink/dsh-checkup; the old repository remains as a pointer.
+- New repository: https://github.com/PerryLink/dsh-tuneup; the old repository remains as a pointer.
 
 
 ## [0.7.7] - 2026-11-02

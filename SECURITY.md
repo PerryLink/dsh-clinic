@@ -6,7 +6,7 @@ Please report security vulnerabilities **privately** through GitHub's private
 vulnerability reporting:
 
 **Security → Report a vulnerability** at
-https://github.com/PerryLink/dsh-checkup/security/advisories/new
+https://github.com/PerryLink/dsh-tuneup/security/advisories/new
 
 Do **not** open a public issue for security findings.
 
@@ -16,7 +16,7 @@ without secrets only.
 
 ## Scope
 
-`dsh-checkup` is a zero-dependency CLI. It reads a plugin
+`dsh-tuneup` is a zero-dependency CLI. It reads a plugin
 repository (package.json, cordis.patch.yml, sources, and `npm pack --dry-run`
 metadata) and, in the smoke group, installs a plugin into a throwaway
 `%TEMP%` profile. Reports are most useful for:

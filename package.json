@@ -1,5 +1,5 @@
 {
-  "name": "dsh-checkup",
+  "name": "dsh-tuneup",
   "version": "0.8.0",
   "description": "Zero-dependency static + sandbox smoke detector for DeepSeek Harness (dsh) plugins: package-structure gates (R), cordis contract scans (K), keyless-headless sandbox smoke (D), and ecosystem-listing checks (CC).",
   "author": {
@@ -19,7 +19,7 @@
     "./package.json": "./package.json"
   },
   "bin": {
-    "dsh-checkup": "./doctor.mjs",
+    "dsh-tuneup": "./doctor.mjs",
     "dsh-plugin-doctor": "./doctor.mjs"
   },
   "files": [
@@ -67,11 +67,11 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PerryLink/dsh-checkup.git"
+    "url": "git+https://github.com/PerryLink/dsh-tuneup.git"
   },
-  "homepage": "https://www.npmjs.com/package/dsh-checkup",
+  "homepage": "https://www.npmjs.com/package/dsh-tuneup",
   "bugs": {
-    "url": "https://github.com/PerryLink/dsh-checkup/issues"
+    "url": "https://github.com/PerryLink/dsh-tuneup/issues"
   },
   "funding": {
     "type": "github",

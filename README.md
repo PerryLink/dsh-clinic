@@ -1,6 +1,6 @@
-# dsh-checkup
+# dsh-tuneup
 
-> **Renamed:** previously `@perrylink/dsh-plugin-doctor`; now **`dsh-checkup`**. The old repository stays as a pointer/backup. New home: https://github.com/PerryLink/dsh-checkup
+> **Renamed:** previously `@perrylink/dsh-plugin-doctor`; now **`dsh-tuneup`**. The old repository stays as a pointer/backup. New home: https://github.com/PerryLink/dsh-tuneup
 
 
 
@@ -9,20 +9,20 @@
 
 > Release stamp: `0.8.0` (2026-11-02).
 
-> **Package name.** This project publishes to npm as **`dsh-checkup`**. The bare npm name `dsh-checkup` belongs to a different, unrelated project — never run `npx dsh-checkup`; installing it does not install this plugin.
+> **Package name.** This project publishes to npm as **`dsh-tuneup`**. The bare npm name `dsh-tuneup` belongs to a different, unrelated project — never run `npx dsh-tuneup`; installing it does not install this plugin.
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
-[![npm version](https://img.shields.io/npm/v/%40perrylink%2Fdsh-checkup)](https://www.npmjs.com/package/dsh-checkup)
-[![npm downloads](https://img.shields.io/npm/dm/%40perrylink%2Fdsh-checkup)](https://www.npmjs.com/package/dsh-checkup)
+[![npm version](https://img.shields.io/npm/v/%40perrylink%2Fdsh-tuneup)](https://www.npmjs.com/package/dsh-tuneup)
+[![npm downloads](https://img.shields.io/npm/dm/%40perrylink%2Fdsh-tuneup)](https://www.npmjs.com/package/dsh-tuneup)
 [![Node](https://img.shields.io/badge/node-%5E22.19%20%7C%7C%20%3E%3D24-brightgreen.svg)](#)
-[![CI](https://img.shields.io/github/actions/workflow/status/PerryLink/dsh-checkup/ci.yml?branch=main&label=CI)](https://github.com/PerryLink/dsh-checkup/actions)
-[![dshfind](https://dshfind.com/api/badge/PerryLink/dsh-checkup?metric=downloads)](https://dshfind.com/plugins/PerryLink/dsh-checkup?ref=badge)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/PerryLink/dsh-checkup/badge)](https://api.securityscorecards.dev/projects/github.com/PerryLink/dsh-checkup)
+[![CI](https://img.shields.io/github/actions/workflow/status/PerryLink/dsh-tuneup/ci.yml?branch=main&label=CI)](https://github.com/PerryLink/dsh-tuneup/actions)
+[![dshfind](https://dshfind.com/api/badge/PerryLink/dsh-tuneup?metric=downloads)](https://dshfind.com/plugins/PerryLink/dsh-tuneup?ref=badge)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/PerryLink/dsh-tuneup/badge)](https://api.securityscorecards.dev/projects/github.com/PerryLink/dsh-tuneup)
 
 [English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
 
 ```sh
-dsh plugin --profile <name> add dsh-checkup
+dsh plugin --profile <name> add dsh-tuneup
 ```
 
 
@@ -39,17 +39,17 @@ channel in the workspace (full text in `SURVEY.md`).
 ## Installation (DSH bundle)
 
 ```sh
-dsh plugin --profile web add github:PerryLink/dsh-checkup
+dsh plugin --profile web add github:PerryLink/dsh-tuneup
 ```
 
-`dsh-checkup` declares `dsh.bundle.patch` → `cordis.patch.yml` in package.json, so it can also be installed as a DeepSeek Harness bundle:
+`dsh-tuneup` declares `dsh.bundle.patch` → `cordis.patch.yml` in package.json, so it can also be installed as a DeepSeek Harness bundle:
 
 ```powershell
 # git channel (latest main)
-dsh plugin --profile web add github:PerryLink/dsh-checkup
+dsh plugin --profile web add github:PerryLink/dsh-tuneup
 
-# npm channel (released version; always use the scoped full name -- the bare name dsh-checkup is a different project)
-dsh plugin --profile web add dsh-checkup
+# npm channel (released version; always use the scoped full name -- the bare name dsh-tuneup is a different project)
+dsh plugin --profile web add dsh-tuneup
 ```
 
 The inserted line loads this package under the standard Cordis plugin contract: the host half is a plain ESM module exporting `apply(ctx)` (declaring `inject` for the services it needs). The package ships no browser UI, so there is no `dsh.client` declaration.
@@ -61,7 +61,7 @@ export function apply(ctx) {
 }
 ```
 
-Uninstall: `dsh plugin --profile web remove dsh-checkup` (or delete that line from the profile patch). The CLI usage below is unaffected.
+Uninstall: `dsh plugin --profile web remove dsh-tuneup` (or delete that line from the profile patch). The CLI usage below is unaffected.
 
 ## ⭐ 如果它帮到了你
 
@@ -70,11 +70,11 @@ Uninstall: `dsh plugin --profile web remove dsh-checkup` (or delete that line fr
 *English:* part of a 95 plugin family for DeepSeek Harness. If it is useful, **a star helps the next person find it** — nothing is gated behind it.
 
 
-## What is dsh-checkup?
+## What is dsh-tuneup?
 
 An all-in-one "integrity + runtime health" checker for dsh plugins. Zero dependencies (it uses only what Node ≥22 ships), and one run covers four layers at once:
 
-![Workflow diagram for dsh-checkup: request → policy / review → verdict.](docs/assets/dsh-checkup-flow.svg)
+![Workflow diagram for dsh-tuneup: request → policy / review → verdict.](docs/assets/dsh-tuneup-flow.svg)
 
 *Workflow overview: request → policy / review → verdict. The examples below use the real command surface.*
 
@@ -82,7 +82,7 @@ An all-in-one "integrity + runtime health" checker for dsh plugins. Zero depende
 
 ## Comparison
 
-![Measured comparison chart for dsh-checkup](https://raw.githubusercontent.com/PerryLink/dsh-checkup/main/docs/assets/dsh-checkup-evidence.png)
+![Measured comparison chart for dsh-tuneup](https://raw.githubusercontent.com/PerryLink/dsh-tuneup/main/docs/assets/dsh-tuneup-evidence.png)
 
 60 candidates → 20 qualifying plugins · scan dated 2026-09-10 (data/rk-scans.json)
 
@@ -185,11 +185,11 @@ Aliases are case-insensitive, and the Chinese full names still work. **Use the a
 
 ## Name collisions (important)
 
-This repository is **`dsh-checkup`**, and it is **not the same project** as other same-named tools in the ecosystem:
+This repository is **`dsh-tuneup`**, and it is **not the same project** as other same-named tools in the ecosystem:
 
-- The bare npm name `dsh-checkup` belongs to **Xrainsmile/DSH-Plugin-Doctor** (a different project, 0.1.1). So **never run `npx dsh-checkup`** — that executes someone else's package; always use the scoped full name `dsh-checkup@<exact version>`.
-- Ten GitHub repos carry `dsh-checkup` in their name (eight of them **exactly** that name), including `zoahdev/dsh-checkup` (GitHub-only, never published to npm).
-- `dsh-testkit`'s README links `dsh-checkup` to the zoahdev repo; that has nothing to do with this one.
+- The bare npm name `dsh-tuneup` belongs to **Xrainsmile/DSH-Plugin-Doctor** (a different project, 0.1.1). So **never run `npx dsh-tuneup`** — that executes someone else's package; always use the scoped full name `dsh-tuneup@<exact version>`.
+- Ten GitHub repos carry `dsh-tuneup` in their name (eight of them **exactly** that name), including `zoahdev/dsh-tuneup` (GitHub-only, never published to npm).
+- `dsh-testkit`'s README links `dsh-tuneup` to the zoahdev repo; that has nothing to do with this one.
 
 In one line: **zero-dependency, offline-capable (`--only R,K`), and it turns the Cordis v4 contracts (K1–K9) and five ecosystem directory listings (CC1–CC5) into a CI gate whose verdict is readable from the exit code.** (No "the only" style claim — merely that nothing comparable appeared within the set of tools actually surveyed.)
 
@@ -220,13 +220,13 @@ markdown, what each verdict means, and what this check does *not* prove.
 ### Path A — self-serve gate badge (no permission needed, no author involvement)
 
 This badge makes **one narrow, checkable claim**: *the repository runs
-dsh-checkup's static R+K gate in its own CI, and that workflow is green on
+dsh-tuneup's static R+K gate in its own CI, and that workflow is green on
 the repository's default branch.* It is rendered by shields.io directly from your
 own workflow's status, so it needs no registry entry, no pull request, no token
 from anyone, and it cannot be broken by this project's infrastructure:
 
 ```markdown
-[![dsh-doctor R+K](https://img.shields.io/github/actions/workflow/status/<owner>/<repo>/plugin-doctor.yml?branch=main&label=dsh-doctor%20R%2BK)](https://github.com/PerryLink/dsh-checkup/blob/main/SPEC.md)
+[![dsh-doctor R+K](https://img.shields.io/github/actions/workflow/status/<owner>/<repo>/plugin-doctor.yml?branch=main&label=dsh-doctor%20R%2BK)](https://github.com/PerryLink/dsh-tuneup/blob/main/SPEC.md)
 ```
 
 Replace `<owner>/<repo>` (and `branch=` if your default branch is not `main`).
@@ -242,10 +242,10 @@ else; and it is served by shields.io, which learns your repository name.
 
 ### Path B — author-issued audited badge
 
-Wearing this badge means exactly one auditable thing: **the repo runs dsh-checkup's static R+K gate (16 checks: R0/R1/R3/R5/R6/R7/R8 + K1–K9) in its own CI, and that gate is green on the current HEAD of the default branch**, *as re-checked by this project's auditor*. It is **not** a certification badge: no Scorecard, no provenance, no install smoke. R2 (tarball integrity) and R4 (entry contract) read the built `lib/`, and building most family repos needs `HARNESS_COMMIT` + `gen-aliases` to pass — those two are covered by each repo's own `ci.yml` (build-drift gate + pack smoke) and are deliberately outside this gate.
+Wearing this badge means exactly one auditable thing: **the repo runs dsh-tuneup's static R+K gate (16 checks: R0/R1/R3/R5/R6/R7/R8 + K1–K9) in its own CI, and that gate is green on the current HEAD of the default branch**, *as re-checked by this project's auditor*. It is **not** a certification badge: no Scorecard, no provenance, no install smoke. R2 (tarball integrity) and R4 (entry contract) read the built `lib/`, and building most family repos needs `HARNESS_COMMIT` + `gen-aliases` to pass — those two are covered by each repo's own `ci.yml` (build-drift gate + pack smoke) and are deliberately outside this gate.
 
 ```markdown
-[![dsh-doctor](https://raw.githubusercontent.com/PerryLink/dsh-checkup/main/badges/PerryLink__dsh-github.svg)](https://github.com/PerryLink/dsh-checkup#verified-徽章)
+[![dsh-doctor](https://raw.githubusercontent.com/PerryLink/dsh-tuneup/main/badges/PerryLink__dsh-github.svg)](https://github.com/PerryLink/dsh-tuneup#verified-徽章)
 [![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
 ```
 
@@ -260,11 +260,11 @@ secret. This has happened (once as `401`, then as `403 rate limit exceeded`), an
 it is the reason Path A exists and is recommended. `scripts/verify.mjs` now stops
 at the first such response, exits `3`, and writes a registry whose reasons name
 the real cause instead of emitting the same rate-limit line for every repo.
-- The registry `data/verified.json` is the single source of truth for Path B, refreshed by `.github/workflows/verified.yml` daily and on every relevant push. A refresh only reads the GitHub API: it parses each repo's HEAD `plugin-doctor.yml` gate configuration (which must pin `dsh-checkup@<version>`, use a working `--only` argument, and self-verify that R0/K1 actually ran), then checks the conclusion of that HEAD's `plugin-doctor` workflow run. **This repo's CI never clones, installs or executes any third-party code.**
+- The registry `data/verified.json` is the single source of truth for Path B, refreshed by `.github/workflows/verified.yml` daily and on every relevant push. A refresh only reads the GitHub API: it parses each repo's HEAD `plugin-doctor.yml` gate configuration (which must pin `dsh-tuneup@<version>`, use a working `--only` argument, and self-verify that R0/K1 actually ran), then checks the conclusion of that HEAD's `plugin-doctor` workflow run. **This repo's CI never clones, installs or executes any third-party code.**
 - Badge appearance: the visual language follows the two newer badges in the ecosystem (`dsh.directory`'s monospace-uppercase + letter-spacing + mark + gradient, and `awesome-dsh-plugin`'s seal block) — **a silver/platinum metallic left segment, a shield tick mark, and ink-blue monospace uppercase**, with the right segment a **solid GitHub-convention status colour** (green/orange/red/grey) carrying a monospace uppercase status word, and the status additionally expressed by a **path-drawn icon** (✓ / ! / ✕ / –) so it stays readable with colour-vision deficiency. 5px corner radius + 1px stroke; **the stroke is required** — without it the silver left segment disappears against a white README background.
 - Four states (value text uses the shields / GitHub Actions conventional words): `passing` (green: the HEAD run succeeded) / `warning` (orange: HEAD has not run yet, a run is still queued, or a gate precondition is missing) / `failing` (red: the HEAD run failed, or the gate configuration does not hold — including a "fake gate" whose `--only` argument is doubly mis-encoded) / `no data` (grey: the API query failed). The badge is **dynamic**: once it stops passing it turns red. The precise R+K scope lives in this section and in the registry's `meaning` field, not in the badge text (the badge links back here).
 - To join Path B: open a PR against `data/verified-repos.json` adding `{ "repo": "<owner>/<name>", "package": "<npm package name>" }`, and add `plugin-doctor.yml` to your own repo; the entry must pass the audit above. **Path A needs none of this.**
-- **The gate file is shipped, not scraped.** Copy [`plugin-doctor.yml`](plugin-doctor.yml) — the canonical, ready-to-use workflow — to `.github/workflows/plugin-doctor.yml` in your repository and adjust the pin. It is also inside the npm tarball, so `npx dsh-checkup` users can read the shipped copy instead of reconstructing the step from this README. Group names use the **ASCII aliases `R,K`** (supported since 0.1.5, keeping file and command line pure ASCII), and the tail self-verifies that R0/K1 really ran.
+- **The gate file is shipped, not scraped.** Copy [`plugin-doctor.yml`](plugin-doctor.yml) — the canonical, ready-to-use workflow — to `.github/workflows/plugin-doctor.yml` in your repository and adjust the pin. It is also inside the npm tarball, so `npx dsh-tuneup` users can read the shipped copy instead of reconstructing the step from this README. Group names use the **ASCII aliases `R,K`** (supported since 0.1.5, keeping file and command line pure ASCII), and the tail self-verifies that R0/K1 really ran.
 
 > Why the gate installs and builds nothing, and why this repo does not run the badge itself: the static R/K checks read only the committed tree (no dependencies needed), whereas `npm run build` fails in an environment without the harness aliases, and its prebuild wipes the committed `lib/`, manufacturing a false red. Concentrating third-party dependency installs into this repo's CI, on the other hand, would be a supply-chain risk. So the gate runs inside each repo's own CI against the committed tree, and this repo only audits and issues the Path B badge.
 
@@ -359,20 +359,20 @@ OUTREACH.md              adoption notes: channel states, positioning, actions
 
 ## Status
 
-Official repository: GitHub `PerryLink/dsh-checkup` (Apache-2.0), npm `dsh-checkup`.
+Official repository: GitHub `PerryLink/dsh-tuneup` (Apache-2.0), npm `dsh-tuneup`.
 **Current version 0.7.7**, published to npm. Releases go out through **npm Trusted
 Publishing (OIDC)** — no long-lived token — after the `NPM_TOKEN` secret expired
 and blocked the 0.2.4 and 0.3.0 attempts. See `CHANGELOG.md`. CI usage
 (**please use the ASCII aliases**):
 
 ```powershell
-npx --yes dsh-checkup@0.5.0 --repo . --no-smoke --only "R,K"
+npx --yes dsh-tuneup@0.5.0 --repo . --no-smoke --only "R,K"
 ```
 
 Or as a **GitHub Action** — no install step, no copied workflow file:
 
 ```yaml
-- uses: PerryLink/dsh-checkup@v0.7.7
+- uses: PerryLink/dsh-tuneup@v0.7.7
   with:
     only: R,K
 ```
@@ -404,7 +404,7 @@ attributed to PerryLink and do not present them as your own standard.
 
 ### Public result sets
 
-- [`THIRD-PARTY-RK-SCAN.md`](https://github.com/PerryLink/dsh-checkup/blob/main/THIRD-PARTY-RK-SCAN.md) — the first static R+K scan of **third-party** (non-PerryLink) dsh plugins: 60 candidates → 20 plugins that really declare `dsh.bundle.patch` → under the 16-check gate, **10 passed / 10 failed**. Method: read-only clones, **zero execution** of third-party code, R2/R4 listed separately and not gated; it includes the reproduction commands, a correction to this scan's own methodology, and a **correction channel for any repo named in it**. Machine-readable form: `data/rk-scans.json`.
+- [`THIRD-PARTY-RK-SCAN.md`](https://github.com/PerryLink/dsh-tuneup/blob/main/THIRD-PARTY-RK-SCAN.md) — the first static R+K scan of **third-party** (non-PerryLink) dsh plugins: 60 candidates → 20 plugins that really declare `dsh.bundle.patch` → under the 16-check gate, **10 passed / 10 failed**. Method: read-only clones, **zero execution** of third-party code, R2/R4 listed separately and not gated; it includes the reproduction commands, a correction to this scan's own methodology, and a **correction channel for any repo named in it**. Machine-readable form: `data/rk-scans.json`.
   **It is not a certification, not a rating, and says nothing about a plugin's security**: a pass means only that "the 16 static checks reported no failure on that commit".
 
 ## PerryLink DSH Plugin Family
@@ -473,7 +473,7 @@ This project is part of the DeepSeek Harness plugin family from [PerryLink](http
 | **[dsh-permit-report-check](https://github.com/PerryLink/dsh-permit-report-check)** |  |
 | **[dsh-pipeline-check](https://github.com/PerryLink/dsh-pipeline-check)** |  |
 | **[dsh-pleading-draft](https://github.com/PerryLink/dsh-pleading-draft)** |  |
-| **[dsh-checkup](https://github.com/PerryLink/dsh-checkup)** |  |
+| **[dsh-tuneup](https://github.com/PerryLink/dsh-tuneup)** |  |
 | **[dsh-plugin-guide](https://github.com/PerryLink/dsh-plugin-guide)** |  |
 | **[dsh-plugin-kit](https://github.com/PerryLink/dsh-plugin-kit)** |  |
 | **[dsh-plugin-upgrade](https://github.com/PerryLink/dsh-plugin-upgrade)** |  |
@@ -553,7 +553,7 @@ node doctor.mjs --repo . --only NOPE --no-smoke
 可用分组: 静态·包结构（R）, 静态·cordis 契约扫描（K）, 动态面·宿主契约（X）, 生态·集合站清单（CC）
 ~~~
 
-*Observed from `plugins/dsh-checkup/doctor.mjs:196-206; plugins/dsh-checkup/tests/selftest.mjs:95; plugins/dsh-checkup/README.md:169-171`*
+*Observed from `plugins/dsh-tuneup/doctor.mjs:196-206; plugins/dsh-tuneup/tests/selftest.mjs:95; plugins/dsh-tuneup/README.md:169-171`*
 
 #### Brief examples
 
