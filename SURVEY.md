@@ -93,7 +93,7 @@ generation 迁移）；rc.8 SQLite 格式不兼容；rc.7 设置卡片能力。R
 - **判据**：A = 五维全过且 E=ok 无 veto；B = E 过且 A–D ≥3；C = E 过其余不全；D = 硬门失败（缺 bundle/无
   license/恶意模式）；Security veto（混淆/凭据外传/异常安装期行为）直接 D 并公布原因；**environment-blocked E
   （如 pnpm approve-builds 交互门）保 B 并记录复现命令，绝不记 D**；无证据记 `no-evidence`。
-- 数据 `data/certified.json`（specVersion v1，entries 含 grade/snapshot/dimensions 五维 evidence/veto）；
+- 数据 `data/attestations.json`（specVersion v1，entries 含 grade/snapshot/dimensions 五维 evidence/veto）；
   `scripts/badge.mjs` 生成徽章；`registry.yml` 每日 cron 重渲染；`dsh-cert-mcp` 只读 MCP 暴露注册表（get/list/
   spec 三工具）。现态：PerryLink/dsh-auto-review grade A。
 
