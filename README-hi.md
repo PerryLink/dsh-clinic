@@ -2,20 +2,20 @@
 
 > Release stamp: `0.4.6` (2026-10-04).
 
-> **पैकेज नाम।** यह प्रोजेक्ट npm पर **`@perrylink/dsh-plugin-doctor`** के रूप में प्रकाशित होता है। सादा नाम `dsh-plugin-doctor` किसी असंबंधित प्रोजेक्ट का है — कभी `npx dsh-plugin-doctor` न चलाएँ; उसे इंस्टॉल करने से यह प्लगइन इंस्टॉल नहीं होता।
+> **पैकेज नाम।** यह प्रोजेक्ट npm पर **`dsh-clinic`** के रूप में प्रकाशित होता है। सादा नाम `dsh-plugin-doctor` किसी असंबंधित प्रोजेक्ट का है — कभी `npx dsh-plugin-doctor` न चलाएँ; उसे इंस्टॉल करने से यह प्लगइन इंस्टॉल नहीं होता।
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
-[![npm version](https://img.shields.io/npm/v/%40perrylink%2Fdsh-plugin-doctor)](https://www.npmjs.com/package/@perrylink/dsh-plugin-doctor)
-[![npm downloads](https://img.shields.io/npm/dm/%40perrylink%2Fdsh-plugin-doctor)](https://www.npmjs.com/package/@perrylink/dsh-plugin-doctor)
+[![npm version](https://img.shields.io/npm/v/%40perrylink%2Fdsh-plugin-doctor)](https://www.npmjs.com/package/dsh-clinic)
+[![npm downloads](https://img.shields.io/npm/dm/%40perrylink%2Fdsh-plugin-doctor)](https://www.npmjs.com/package/dsh-clinic)
 [![Node](https://img.shields.io/badge/node-%5E22.19%20%7C%7C%20%3E%3D24-brightgreen.svg)](#)
-[![CI](https://img.shields.io/github/actions/workflow/status/PerryLink/dsh-plugin-doctor/ci.yml?branch=main&label=CI)](https://github.com/PerryLink/dsh-plugin-doctor/actions)
-[![dshfind](https://dshfind.com/api/badge/PerryLink/dsh-plugin-doctor?metric=downloads&lang=hi)](https://dshfind.com/hi/plugins/PerryLink/dsh-plugin-doctor?ref=badge)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/PerryLink/dsh-plugin-doctor/badge)](https://api.securityscorecards.dev/projects/github.com/PerryLink/dsh-plugin-doctor)
+[![CI](https://img.shields.io/github/actions/workflow/status/PerryLink/dsh-clinic/ci.yml?branch=main&label=CI)](https://github.com/PerryLink/dsh-clinic/actions)
+[![dshfind](https://dshfind.com/api/badge/PerryLink/dsh-clinic?metric=downloads&lang=hi)](https://dshfind.com/hi/plugins/PerryLink/dsh-clinic?ref=badge)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/PerryLink/dsh-clinic/badge)](https://api.securityscorecards.dev/projects/github.com/PerryLink/dsh-clinic)
 
 [English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
 
 ```sh
-dsh plugin --profile <name> add @perrylink/dsh-plugin-doctor
+dsh plugin --profile <name> add dsh-clinic
 ```
 
 
@@ -37,10 +37,10 @@ docs और सोर्स, cordiverse/cordis के सोर्स अनु�
 
 ```powershell
 # git चैनल (नवीनतम main)
-dsh plugin --profile web add github:PerryLink/dsh-plugin-doctor
+dsh plugin --profile web add github:PerryLink/dsh-clinic
 
 # npm चैनल (रिलीज़ किया गया संस्करण; हमेशा scoped पूरा नाम इस्तेमाल करें -- बिना scope वाला नाम dsh-plugin-doctor एक अलग प्रोजेक्ट है)
-dsh plugin --profile web add @perrylink/dsh-plugin-doctor
+dsh plugin --profile web add dsh-clinic
 ```
 
 जोड़ी गई लाइन इस पैकेज को मानक Cordis plugin अनुबंध के तहत लोड करती है: host half एक सादा ESM मॉड्यूल है जो `apply(ctx)` export करता है (अपनी ज़रूरत की सेवाओं के लिए `inject` घोषित करता हुआ)। पैकेज कोई browser UI नहीं भेजता, इसलिए `dsh.client` घोषणा नहीं है।
@@ -52,7 +52,7 @@ export function apply(ctx) {
 }
 ```
 
-अनइंस्टॉल: `dsh plugin --profile web remove @perrylink/dsh-plugin-doctor` (या profile patch से वह लाइन हटा दें)। नीचे दिया CLI उपयोग इससे अप्रभावित रहता है।
+अनइंस्टॉल: `dsh plugin --profile web remove dsh-clinic` (या profile patch से वह लाइन हटा दें)। नीचे दिया CLI उपयोग इससे अप्रभावित रहता है।
 
 ## What is dsh-plugin-doctor?
 
@@ -92,7 +92,7 @@ version difference is reported as a note — most skills version independently.
 
 ## Comparison
 
-![dsh-plugin-doctor का मापा गया तुलना चार्ट](https://raw.githubusercontent.com/PerryLink/dsh-plugin-doctor/main/docs/assets/dsh-plugin-doctor-evidence.png)
+![dsh-plugin-doctor का मापा गया तुलना चार्ट](https://raw.githubusercontent.com/PerryLink/dsh-clinic/main/docs/assets/dsh-plugin-doctor-evidence.png)
 
 60 candidates → 20 qualifying plugins · scan dated 2026-09-10 (data/rk-scans.json)
 
@@ -104,7 +104,7 @@ version difference is reported as a note — most skills version independently.
 ## संगतता
 
 ```sh
-dsh plugin --profile web add github:PerryLink/dsh-plugin-doctor
+dsh plugin --profile web add github:PerryLink/dsh-clinic
 ```
 
 | पहलू | स्थिति |
@@ -200,9 +200,9 @@ Aliases case-insensitive हैं, और समूहों के चीन�
 
 ## नाम की टकराहट (महत्वपूर्ण)
 
-यह रिपॉज़िटरी **`@perrylink/dsh-plugin-doctor`** है, और पारिस्थितिकी के अन्य समान-नाम वाले टूलों से **एक ही प्रोजेक्ट नहीं** है:
+यह रिपॉज़िटरी **`dsh-clinic`** है, और पारिस्थितिकी के अन्य समान-नाम वाले टूलों से **एक ही प्रोजेक्ट नहीं** है:
 
-- npm का बिना-scope नाम `dsh-plugin-doctor` **Xrainsmile/DSH-Plugin-Doctor** का है (एक अलग प्रोजेक्ट, 0.1.1)। इसलिए **`npx dsh-plugin-doctor` कभी न चलाएँ** — वह किसी और का पैकेज चलाता है; हमेशा scoped पूरा नाम `@perrylink/dsh-plugin-doctor@<exact version>` इस्तेमाल करें।
+- npm का बिना-scope नाम `dsh-plugin-doctor` **Xrainsmile/DSH-Plugin-Doctor** का है (एक अलग प्रोजेक्ट, 0.1.1)। इसलिए **`npx dsh-plugin-doctor` कभी न चलाएँ** — वह किसी और का पैकेज चलाता है; हमेशा scoped पूरा नाम `dsh-clinic@<exact version>` इस्तेमाल करें।
 - दस GitHub repos के नाम में `dsh-plugin-doctor` है (उनमें आठ का नाम **बिल्कुल** यही है), जिनमें `zoahdev/dsh-plugin-doctor` भी है (केवल GitHub पर, npm पर कभी प्रकाशित नहीं)।
 - `dsh-testkit` का README `dsh-plugin-doctor` को zoahdev repo से लिंक करता है; उसका इससे कोई लेना-देना नहीं।
 
@@ -222,11 +222,11 @@ Aliases case-insensitive हैं, और समूहों के चीन�
 यह बैज पहनने का ठीक एक, और ऑडिट-योग्य, अर्थ है: **repo अपने ही CI में dsh-plugin-doctor का static R+K गेट (16 जाँचें: R0/R1/R3/R5/R6/R7/R8 + K1–K9) चलाता है, और वह गेट डिफ़ॉल्ट branch के मौजूदा HEAD पर हरा है।** यह **प्रमाणन** बैज नहीं है: इसमें न Scorecard, न provenance, न install smoke। R2 (tarball integrity) और R4 (entry contract) बने हुए `lib/` को पढ़ते हैं, और परिवार के ज़्यादातर repos के build को पास होने के लिए `HARNESS_COMMIT` + `gen-aliases` चाहिए — ये दोनों हर repo के अपने `ci.yml` (build-drift gate + pack smoke) से कवर होते हैं और जानबूझकर इस गेट से बाहर हैं।
 
 ```markdown
-[![dsh-doctor](https://raw.githubusercontent.com/PerryLink/dsh-plugin-doctor/main/badges/PerryLink__dsh-github.svg)](https://github.com/PerryLink/dsh-plugin-doctor#verified-徽章)
+[![dsh-doctor](https://raw.githubusercontent.com/PerryLink/dsh-clinic/main/badges/PerryLink__dsh-github.svg)](https://github.com/PerryLink/dsh-clinic#verified-徽章)
 [![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
 ```
 
-- रजिस्ट्री `data/verified.json` ही एकमात्र सत्य-स्रोत है, जिसे `.github/workflows/verified.yml` रोज़ और हर संबंधित push पर ताज़ा करता है। Refresh केवल GitHub API पढ़ता है: यह हर repo के HEAD की `plugin-doctor.yml` गेट कॉन्फ़िगरेशन पढ़ता है (जिसमें `@perrylink/dsh-plugin-doctor@<version>` pin होना, काम करता `--only` argument होना, और R0/K1 के वाकई चलने का स्व-सत्यापन होना ज़रूरी है), फिर उस HEAD के `plugin-doctor` workflow run का नतीजा जाँचता है। **इस repo का CI कभी कोई third-party कोड clone, install या execute नहीं करता।**
+- रजिस्ट्री `data/verified.json` ही एकमात्र सत्य-स्रोत है, जिसे `.github/workflows/verified.yml` रोज़ और हर संबंधित push पर ताज़ा करता है। Refresh केवल GitHub API पढ़ता है: यह हर repo के HEAD की `plugin-doctor.yml` गेट कॉन्फ़िगरेशन पढ़ता है (जिसमें `dsh-clinic@<version>` pin होना, काम करता `--only` argument होना, और R0/K1 के वाकई चलने का स्व-सत्यापन होना ज़रूरी है), फिर उस HEAD के `plugin-doctor` workflow run का नतीजा जाँचता है। **इस repo का CI कभी कोई third-party कोड clone, install या execute नहीं करता।**
 - बैज का रूप: दृश्य-भाषा पारिस्थितिकी के दो नए बैजों का अनुसरण करती है (`dsh.directory` का monospace-uppercase + letter-spacing + mark + gradient, और `awesome-dsh-plugin` का seal block) — **चाँदी/प्लैटिनम धात्विक बायाँ खंड, एक shield tick mark, और स्याही-नीला monospace uppercase**, जिसमें दायाँ खंड **GitHub-परंपरा का ठोस status रंग** (हरा/नारंगी/लाल/स्लेटी) है और monospace uppercase status शब्द रखता है, तथा status अलग से **path से बनाए icon** (✓ / ! / ✕ / –) से भी व्यक्त होता है, ताकि रंग-दृष्टि दोष में भी पढ़ा जा सके। 5px corner radius + 1px stroke; **stroke ज़रूरी है** — इसके बिना चाँदी वाला बायाँ खंड सफ़ेद README पृष्ठभूमि पर ग़ायब हो जाता है।
 - चार अवस्थाएँ (मान-पाठ shields / GitHub Actions के पारंपरिक शब्द इस्तेमाल करता है): `passing` (हरा: HEAD का run सफल) / `warning` (नारंगी: HEAD अभी चला नहीं, कोई run अब भी queue में है, या गेट की कोई पूर्व-शर्त ग़ायब है) / `failing` (लाल: HEAD का run विफल, या गेट कॉन्फ़िगरेशन टिकता नहीं — जिसमें वह "नक़ली गेट" भी शामिल है जिसका `--only` argument दोहरे encoding में बिगड़ा है) / `no data` (स्लेटी: API क्वेरी विफल)। बैज **dynamic** है: पास होना बंद होते ही लाल हो जाता है। R+K का सटीक दायरा इसी अनुभाग और रजिस्ट्री के `meaning` field में है, बैज के पाठ में नहीं (बैज यहीं वापस लिंक करता है)।
 - शामिल होने के लिए: `data/verified-repos.json` पर PR खोलें और `{ "repo": "<owner>/<name>", "package": "<npm package name>" }` जोड़ें, तथा नीचे दिए अनुसार अपने ही repo में `plugin-doctor.yml` जोड़ें; entry को ऊपर दिया ऑडिट पास करना होगा।
@@ -236,7 +236,7 @@ Aliases case-insensitive हैं, और समूहों के चीन�
       - name: Run dsh-plugin-doctor (static R/K on the committed tree)
         run: |
           set +e
-          out="$(npx --yes @perrylink/dsh-plugin-doctor@0.1.6 --repo . --no-smoke --only "R,K" --json /tmp/doctor.json 2>&1)"
+          out="$(npx --yes dsh-clinic@0.1.6 --repo . --no-smoke --only "R,K" --json /tmp/doctor.json 2>&1)"
           set -e
           printf '%s\n' "$out"
           echo "$out" | grep -q 'R0 ' || { echo "::error::doctor ran no R checks"; exit 1; }
@@ -296,11 +296,11 @@ SURVEY.md                पूर्ण-चैनल detection methodology त�
 
 ## स्थिति
 
-आधिकारिक रिपॉज़िटरी: GitHub `PerryLink/dsh-plugin-doctor` (Apache-2.0), npm `@perrylink/dsh-plugin-doctor`।
+आधिकारिक रिपॉज़िटरी: GitHub `PerryLink/dsh-clinic` (Apache-2.0), npm `dsh-clinic`।
 **मौजूदा संस्करण 0.2.0** (npm पर 0.2.0 से पहले का नवीनतम 0.1.7 था); `CHANGELOG.md` देखें। CI उपयोग (**कृपया ASCII aliases ही इस्तेमाल करें**):
 
 ```powershell
-npx --yes @perrylink/dsh-plugin-doctor@0.2.0 --repo . --no-smoke --only "R,K"
+npx --yes dsh-clinic@0.2.0 --repo . --no-smoke --only "R,K"
 ```
 
 **37 plugin repos** में पहले से `.github/workflows/plugin-doctor.yml` मौजूद है (committed tree पर read-only static गेट → `--only "R,K"` तथा R0/K1 का स्व-सत्यापन, `@0.1.6` पर pinned)।
@@ -310,7 +310,7 @@ pin जानबूझकर 0.1.6 पर टिका है: 0.2.0 R/K मा�
 
 ### सार्वजनिक परिणाम सेट
 
-- [`THIRD-PARTY-RK-SCAN.md`](https://github.com/PerryLink/dsh-plugin-doctor/blob/main/THIRD-PARTY-RK-SCAN.md) — **third-party** (ग़ैर-PerryLink) dsh plugins का पहला static R+K स्कैन: 60 उम्मीदवार → 20 ऐसे plugins जो वाकई `dsh.bundle.patch` घोषित करते हैं → 16-जाँच के गेट में **10 पास / 10 विफल**। तरीक़ा: read-only clones, third-party कोड का **शून्य execution**, R2/R4 अलग सूचीबद्ध और गेट से बाहर; इसमें reproduction commands, इसी स्कैन की methodology का एक सुधार, और **इसमें नाम आए किसी भी repo के लिए सुधार चैनल** शामिल है। Machine-readable रूप: `data/rk-scans.json`।
+- [`THIRD-PARTY-RK-SCAN.md`](https://github.com/PerryLink/dsh-clinic/blob/main/THIRD-PARTY-RK-SCAN.md) — **third-party** (ग़ैर-PerryLink) dsh plugins का पहला static R+K स्कैन: 60 उम्मीदवार → 20 ऐसे plugins जो वाकई `dsh.bundle.patch` घोषित करते हैं → 16-जाँच के गेट में **10 पास / 10 विफल**। तरीक़ा: read-only clones, third-party कोड का **शून्य execution**, R2/R4 अलग सूचीबद्ध और गेट से बाहर; इसमें reproduction commands, इसी स्कैन की methodology का एक सुधार, और **इसमें नाम आए किसी भी repo के लिए सुधार चैनल** शामिल है। Machine-readable रूप: `data/rk-scans.json`।
   **यह न प्रमाणन है, न रेटिंग, और किसी plugin की सुरक्षा के बारे में कुछ नहीं कहता**: pass का अर्थ बस इतना है कि "उस commit पर 16 static जाँचों ने कोई विफलता नहीं बताई"।
 
 ## PerryLink DSH Plugin Family
@@ -379,7 +379,7 @@ pin जानबूझकर 0.1.6 पर टिका है: 0.2.0 R/K मा�
 | **[dsh-permit-report-check](https://github.com/PerryLink/dsh-permit-report-check)** |  |
 | **[dsh-pipeline-check](https://github.com/PerryLink/dsh-pipeline-check)** |  |
 | **[dsh-pleading-draft](https://github.com/PerryLink/dsh-pleading-draft)** |  |
-| **[dsh-plugin-doctor](https://github.com/PerryLink/dsh-plugin-doctor)** |  |
+| **[dsh-plugin-doctor](https://github.com/PerryLink/dsh-clinic)** |  |
 | **[dsh-plugin-guide](https://github.com/PerryLink/dsh-plugin-guide)** |  |
 | **[dsh-plugin-kit](https://github.com/PerryLink/dsh-plugin-kit)** |  |
 | **[dsh-plugin-upgrade](https://github.com/PerryLink/dsh-plugin-upgrade)** |  |

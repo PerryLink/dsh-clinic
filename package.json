@@ -1,6 +1,6 @@
 {
-  "name": "@perrylink/dsh-plugin-doctor",
-  "version": "0.7.7",
+  "name": "dsh-clinic",
+  "version": "0.8.0",
   "description": "Zero-dependency static + sandbox smoke detector for DeepSeek Harness (dsh) plugins: package-structure gates (R), cordis contract scans (K), keyless-headless sandbox smoke (D), and ecosystem-listing checks (CC).",
   "author": {
     "name": "PerryLink",
@@ -19,6 +19,7 @@
     "./package.json": "./package.json"
   },
   "bin": {
+    "dsh-clinic": "./doctor.mjs",
     "dsh-plugin-doctor": "./doctor.mjs"
   },
   "files": [
@@ -39,7 +40,8 @@
     "data/standards.json",
     "GOVERNANCE.md",
     "CITATION.cff",
-    "NOTICE"
+    "NOTICE",
+    "MIGRATION.md"
   ],
   "engines": {
     "node": "^22.19.0 || >=24.0.0",
@@ -65,11 +67,11 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PerryLink/dsh-plugin-doctor.git"
+    "url": "git+https://github.com/PerryLink/dsh-clinic.git"
   },
-  "homepage": "https://www.npmjs.com/package/@perrylink/dsh-plugin-doctor",
+  "homepage": "https://www.npmjs.com/package/dsh-clinic",
   "bugs": {
-    "url": "https://github.com/PerryLink/dsh-plugin-doctor/issues"
+    "url": "https://github.com/PerryLink/dsh-clinic/issues"
   },
   "funding": {
     "type": "github",

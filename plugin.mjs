@@ -2,7 +2,7 @@
 //
 // 通过 cordis.patch.yml 行加载（package.json 的 `dsh.bundle.patch`）：
 //
-//   dsh plugin --profile web add @perrylink/dsh-plugin-doctor
+//   dsh plugin --profile web add dsh-clinic
 //
 // 注册一个只读的 plugin_doctor 工具与 /doctor 命令，1:1 复用 doctor.mjs
 // 的静态检查层（R 包结构 / K cordis 契约 / CC 集合站清单；D 沙箱冒烟为
@@ -20,7 +20,7 @@ import { quarantineSandbox, redact } from './lib/util.mjs'
 import { locateDshInstall } from './lib/host-surface.mjs'
 import { resolveWorkspaceRoot } from './lib/workspace.mjs'
 
-export const name = '@perrylink/dsh-plugin-doctor'
+export const name = 'dsh-clinic'
 
 // Cold start: the loader must wait for both services before apply() reads them,
 // otherwise ctx.get('tools'/'commands') races service activation and the tool

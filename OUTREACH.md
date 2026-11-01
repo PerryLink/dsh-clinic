@@ -27,7 +27,7 @@ project's.
 | Community demand for an official market + standards | open, high-traffic | — | [#1115](https://github.com/deepseek-ai/deepseek-harness/discussions/1115) |
 | Community proposal: repository-layout standard | open | — | [#2269](https://github.com/deepseek-ai/deepseek-harness/discussions/2269) |
 | Third-party write-up of **this** project | **none — corrected 2026-09-23** | — | see the correction below |
-| npm distribution | published, 15 versions | PerryLink | `@perrylink/dsh-plugin-doctor` |
+| npm distribution | published, 15 versions | PerryLink | `dsh-clinic` |
 | Public third-party result set | published | PerryLink | [`THIRD-PARTY-RK-SCAN.md`](THIRD-PARTY-RK-SCAN.md) |
 
 > **Correction: the one "known" blog post is about a different project.** An
@@ -161,14 +161,14 @@ Two corrections to the earlier diagnosis in this file:
 ### B. npm publish — BLOCKED on an expired token (owner: PerryLink)
 `0.2.4` and `0.3.0` are tagged and pushed; both publish runs failed with
 `npm error 404 Not Found - PUT .../@perrylink%2fdsh-plugin-doctor`, and npm added
-`'@perrylink/dsh-plugin-doctor@0.3.0' is not in this registry`.
+`'dsh-clinic@0.3.0' is not in this registry`.
 
 The cause is now established, not guessed: **`npm whoami` returns `E401` with the
 stored credential**, i.e. the token is **expired** — not merely missing a
 permission. `NPM_TOKEN` in the repository secrets was created 2026-09-10.
 
 To complete the release: create a new npm **automation** token with write access,
-`gh secret set NPM_TOKEN --repo PerryLink/dsh-plugin-doctor`, then re-run the
+`gh secret set NPM_TOKEN --repo PerryLink/dsh-clinic`, then re-run the
 `publish` workflow (or re-push a tag). Until then **none of the specification,
 attribution or contract work has reached any adopter** — `latest` on npm is
 still `0.2.3`, and the README pins its examples to that.
@@ -179,7 +179,7 @@ highest-value move available.
 
 ### C2. The family's gate pin is stale, and it is hiding the fixes — **RAISED 2026-09-23**
 
-**Resolved.** The 42 gated repositories were pinned to `@perrylink/dsh-plugin-doctor@0.1.6`
+**Resolved.** The 42 gated repositories were pinned to `dsh-clinic@0.1.6`
 (38) or `0.2.3` (4). 0.1.6 predates every false-positive fix made since, so the
 family was judged by rules that reject valid packages:
 
@@ -406,9 +406,9 @@ this project can offer that no other implementation in that thread has:
 >
 > Concretely, I would add either a fourth value or a `skipped: true` boolean on
 > the check object. I have implemented the `skipped` form in
-> `@perrylink/dsh-plugin-doctor` 0.2.4 (`--format check`), so it is testable
+> `dsh-clinic` 0.2.4 (`--format check`), so it is testable
 > against a real implementation today rather than being a hypothetical.
-> Spec: https://github.com/PerryLink/dsh-plugin-doctor/blob/main/SPEC.md §1.1
+> Spec: https://github.com/PerryLink/dsh-clinic/blob/main/SPEC.md §1.1
 > and §3.2.
 
 That is a genuine improvement to their RFC, offered with a running

@@ -5,7 +5,7 @@
 **PerryLink** ([@PerryLink](https://github.com/PerryLink)) is the author and
 maintainer of both:
 
-- the **tool** — `@perrylink/dsh-plugin-doctor`, and
+- the **tool** — `dsh-clinic`, and
 - the **verification criteria** it implements — the check catalog
   `R0-R8` / `K1-K9` / `D0-D3,D9` / `CC1-CC5`, whose normative text is
   [`SPEC.md`](SPEC.md).
@@ -50,7 +50,7 @@ Adopting the gate costs nothing and needs no permission. It is asked, not
 required, that a conforming project:
 
 1. keeps the criteria attributed to PerryLink and links back to
-   <https://github.com/PerryLink/dsh-plugin-doctor>, and
+   <https://github.com/PerryLink/dsh-clinic>, and
 2. does not present the criteria as its own standard.
 
 Redistributing this software (or a derivative) is governed by Apache-2.0

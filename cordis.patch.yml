@@ -5,4 +5,4 @@
 # row — restate every key when overriding.
 - insert:
     - id: plugin-doctor
-      name: '@perrylink/dsh-plugin-doctor'
+      name: 'dsh-clinic'
