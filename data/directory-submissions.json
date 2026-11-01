@@ -157,9 +157,9 @@
     },
     {
         "Repo":  "dsh-plugin-doctor",
-        "Title":  "[Plugin]: dsh-clinic",
-        "Url":  "https://github.com/PerryLink/dsh-clinic",
-        "Body":  "### Plugin package URL\n\nhttps://github.com/PerryLink/dsh-clinic\n\n### Primary category\n\nPlugins \u0026 Runtime (plugin-tools)\n\n### One-line description\n\nZero-dependency static + sandbox smoke detector for DeepSeek Harness (dsh) plugins: package-structure gates (R), cordis contract scans (K), keyless-headless sandbox smoke (D), and ecosystem-listing checks (CC).\n\n### Install command\n\n```shell\ndsh plugin --profile web add dsh-clinic\n```"
+        "Title":  "[Plugin]: dsh-checkup",
+        "Url":  "https://github.com/PerryLink/dsh-checkup",
+        "Body":  "### Plugin package URL\n\nhttps://github.com/PerryLink/dsh-checkup\n\n### Primary category\n\nPlugins \u0026 Runtime (plugin-tools)\n\n### One-line description\n\nZero-dependency static + sandbox smoke detector for DeepSeek Harness (dsh) plugins: package-structure gates (R), cordis contract scans (K), keyless-headless sandbox smoke (D), and ecosystem-listing checks (CC).\n\n### Install command\n\n```shell\ndsh plugin --profile web add dsh-checkup\n```"
     },
     {
         "Repo":  "dsh-plugin-guide",

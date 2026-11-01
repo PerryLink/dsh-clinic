@@ -398,7 +398,7 @@ for (const item of repos) {
     } else {
       const text = Buffer.from(file.data.content ?? '', 'base64').toString('utf8')
       const pin = text.match(/@perrylink\/dsh-plugin-doctor@([\d.]+)/)
-      if (!pin) gateProblems.push('no pinned dsh-clinic version')
+      if (!pin) gateProblems.push('no pinned dsh-checkup version')
       else entry.doctorPinned = pin[1]
       entry.guard = /grep -q 'R0 '/.test(text)
       const chinese = text.includes('静态·包结构')

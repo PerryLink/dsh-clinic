@@ -20,8 +20,8 @@ conventions.
 |---|---|
 | `awesome-dsh-plugin/awesome-dsh-plugin` (16.7k★, the canonical one) | `data/plugins/PerryLink__dsh-plugin-doctor.yml`, category `dev`, added 2026-09-20 via PR #5460. Its feed also reports `version 0.2.3` and `downloads 2538` |
 | `Dominic789654/awesome-deepseek-harness` | present in **both** `README.md` and `README.zh-CN.md` |
-| `hikariming/dshfind` | the badge API returns `dshfind: dsh-plugin-doctor — ★ 0` for this repo while a bogus one returns `not listed`, and the plugin page carries `PerryLink/dsh-clinic` 34 times. **However**, dshfind's search surface also carries *white-sand-grand's* different plugin under the same bare name, so a name-based lookup there lands on the wrong project. Verify by owner |
-| `2BingLing/dsh-market` (dsh.market) | its 26 MB `plugins.json` contains `"id": "PerryLink/dsh-clinic"` |
+| `hikariming/dshfind` | the badge API returns `dshfind: dsh-plugin-doctor — ★ 0` for this repo while a bogus one returns `not listed`, and the plugin page carries `PerryLink/dsh-checkup` 34 times. **However**, dshfind's search surface also carries *white-sand-grand's* different plugin under the same bare name, so a name-based lookup there lands on the wrong project. Verify by owner |
+| `2BingLing/dsh-market` (dsh.market) | its 26 MB `plugins.json` contains `"id": "PerryLink/dsh-checkup"` |
 | `deepseek1024.com` | listed, `Added 2026-09-13` — **but the page wrongly says "has not published an npm package"** while npm serves 0.3.1. No `/about` or `/submit` route exists; corrected by contact only |
 | `dsh-market/dsh-market` (4.4k★) | **not a submission channel** — it is the app, not the catalog, and its README asks that plugin entries not be PR'd there |
 
@@ -45,7 +45,7 @@ conventions.
 
 ### A method warning that cuts both ways
 
-Grepping a repository for `PerryLink/dsh-clinic` gives false answers **in
+Grepping a repository for `PerryLink/dsh-checkup` gives false answers **in
 both directions**, and this file has already been wrong once because of it:
 
 - **False negative.** GitHub code search does not index large generated
@@ -77,7 +77,7 @@ strength of its README while getting the listing question right by accident.
 
 ### A hard gate worth knowing before approaching anyone
 
-`PerryLink/dsh-clinic` has **0 stars**. `bruc3van/awesome-dsh-plugin`'s
+`PerryLink/dsh-checkup` has **0 stars**. `bruc3van/awesome-dsh-plugin`'s
 CONTRIBUTING requires `stargazers_count > 10` for its **self-submission** lane, so
 that lane is closed regardless of merit — the project is in that catalogue only
 because a curator added it. Any submission route with a star or traction
@@ -149,7 +149,7 @@ better said plainly than buried under more submissions.
    overturned a correct conclusion: `hikariming/dshfind` was reported as NOT
    listing this plugin. **It does.** Verified directly: the badge API returns
    `★ 0` for this repo (it returns `not listed` for an absent one, so the API
-   discriminates), and the plugin page contains `PerryLink/dsh-clinic`
+   discriminates), and the plugin page contains `PerryLink/dsh-checkup`
    **34 times** with **zero** occurrences of `white-sand-grand`, `zoahdev` or
    `lin-cheng-lab`.
 
@@ -265,7 +265,7 @@ I would argue for (2) if you want to hold the vocabulary at three — it is
 additive, needs no consumer change, and is impossible to mistake for a verdict.
 
 **Running implementation, so this is testable rather than hypothetical.**
-`dsh-clinic` 0.3.0 emits both views from one run:
+`dsh-checkup` 0.3.0 emits both views from one run:
 
 ```
 --format check   -> dsh-doctor/v1: { ok, contract, checks:[{name,status,detail,...}] }
@@ -279,7 +279,7 @@ default view still exits `6` for a degraded run. The projection is required neve
 to change whether a project passes — asserted in `tests/compat.mjs`, alongside
 the property that a `skip` is never rendered as `PASS`.
 
-- Spec (the three properties are normative in §1.1): https://github.com/PerryLink/dsh-clinic/blob/main/SPEC.md
+- Spec (the three properties are normative in §1.1): https://github.com/PerryLink/dsh-checkup/blob/main/SPEC.md
 - Degradation rule: §3.2 of the same document.
 
 One related suggestion while the shape is open: `exit 2` is described as "not a
@@ -311,7 +311,7 @@ specification gains users by being citable.
 
 ---
 
-Hi — I maintain `dsh-clinic`, one of the independent checkers
+Hi — I maintain `dsh-checkup`, one of the independent checkers
 that converged on the same `PASS`/`WARN`/`FAIL` + exit `0`/`1`/`2` + flat
 `checks[]` contract.
 
@@ -323,7 +323,7 @@ contract view I map a check that did **not** run to `WARN` **plus
 `WARN` already means "evaluated and suboptimal".
 
 The criteria themselves are specified, with stable per-check IDs, at
-<https://github.com/PerryLink/dsh-clinic/blob/main/SPEC.md> — citable as
+<https://github.com/PerryLink/dsh-checkup/blob/main/SPEC.md> — citable as
 `SPEC v1 §K3`. `§1.1` states that an independent conforming implementation is
 valid and this project will not claim otherwise. If any of it is useful to you,
 take it; if a check ID disagrees with what your implementation does, that is
@@ -372,10 +372,10 @@ Result: `<check id>` — `<one-line meaning>`.
 `the patch: <link or inline diff>`
 
 The criteria are specified at
-<https://github.com/PerryLink/dsh-clinic/blob/main/SPEC.md> — `<check id>`
+<https://github.com/PerryLink/dsh-checkup/blob/main/SPEC.md> — `<check id>`
 is §`<section>`. If the finding is wrong — a stale clone, a layout this heuristic
 mis-reads — open an issue at
-<https://github.com/PerryLink/dsh-clinic/issues> with your output and I
+<https://github.com/PerryLink/dsh-checkup/issues> with your output and I
 will re-run it and correct the row with the same prominence as the original.
 
 ---

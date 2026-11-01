@@ -1,16 +1,16 @@
-# Migration: dsh-clinic
+# Migration: dsh-checkup
 
 This project was previously published as `@perrylink/dsh-plugin-doctor`.
 
-- New package: `dsh-clinic`
-- New repository: https://github.com/PerryLink/dsh-clinic
+- New package: `dsh-checkup`
+- New repository: https://github.com/PerryLink/dsh-checkup
 - Old repository: https://github.com/PerryLink/dsh-plugin-doctor (kept as a pointer/backup)
 - Old npm package: deprecated, points here
 
 Both command names work in this release:
 
 ```sh
-dsh-clinic
+dsh-checkup
 dsh-plugin-doctor   # legacy alias
 ```
 

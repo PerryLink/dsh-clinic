@@ -9,7 +9,7 @@
 # tree and fails the job if any gated check fails. It deliberately does NOT
 # install dependencies or build — see the note below.
 #
-# Criteria and their author: https://github.com/PerryLink/dsh-clinic/blob/main/SPEC.md
+# Criteria and their author: https://github.com/PerryLink/dsh-checkup/blob/main/SPEC.md
 name: plugin-doctor
 
 on:
@@ -23,7 +23,7 @@ permissions:
 
 jobs:
   doctor:
-    name: dsh-clinic (static R/K)
+    name: dsh-checkup (static R/K)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -42,7 +42,7 @@ jobs:
       #     the bare npm name `dsh-plugin-doctor` belongs to a DIFFERENT project
       #     (Xrainsmile/DSH-Plugin-Doctor), so `npx dsh-plugin-doctor` executes
       #     someone else's package and none of these checks run.
-      #     Always: dsh-clinic@<exact version>
+      #     Always: dsh-checkup@<exact version>
       #
       # ⚠️  `cd /tmp` is REQUIRED, not tidiness. `npm exec` resolves the command
       #     name against the current package.json first, so running this inside a
@@ -59,7 +59,7 @@ jobs:
         run: |
           set +e
           cd /tmp
-          out="$(npx --yes dsh-clinic@0.5.0 --repo "$GITHUB_WORKSPACE" --no-smoke --only "R,K" --json /tmp/doctor.json 2>&1)"
+          out="$(npx --yes dsh-checkup@0.5.0 --repo "$GITHUB_WORKSPACE" --no-smoke --only "R,K" --json /tmp/doctor.json 2>&1)"
           set -e
           printf '%s\n' "$out"
           echo "$out" | grep -q 'R0 ' || { echo "::error::doctor ran no R checks"; exit 1; }

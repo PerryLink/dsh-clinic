@@ -30,7 +30,7 @@ Verdicts are `pass` / `warn` / `fail` / `skip` with exit codes 0/1/2/5/6, and it
 One command, read-only, no network, no dependency install:
 
 ```shell
-npx --yes dsh-clinic@0.3.2 --repo . --no-smoke --only "R,K"
+npx --yes dsh-checkup@0.3.2 --repo . --no-smoke --only "R,K"
 ```
 
 把 `plugin-doctor.yml` 复制到你自己仓库的 `.github/workflows/` 即可；模板会自校验 R0/K1 确实跑过，避免"参数写错导致什么都没检查却显示绿灯"。
@@ -43,15 +43,15 @@ Copy `plugin-doctor.yml` into `.github/workflows/` in your repository. The templ
 
 `SPEC.md` is the normative source for all 28 checks. It ships in the package under Apache-2.0 and **anyone may implement it**; the checker is one implementation.
 
-- 规范 | Spec: https://github.com/PerryLink/dsh-clinic/blob/main/SPEC.md
-- 采纳指南 | For adopters: https://github.com/PerryLink/dsh-clinic/blob/main/FOR-ADOPTERS.md
-- npm: https://www.npmjs.com/package/dsh-clinic
+- 规范 | Spec: https://github.com/PerryLink/dsh-checkup/blob/main/SPEC.md
+- 采纳指南 | For adopters: https://github.com/PerryLink/dsh-checkup/blob/main/FOR-ADOPTERS.md
+- npm: https://www.npmjs.com/package/dsh-checkup
 
 ### 关于命名 | On the name
 
-⚠️ `dsh-plugin-doctor` 这个名字有多个项目在用。npm 上的裸名 `dsh-plugin-doctor` **不是这个项目**——请始终用带 scope 的 `dsh-clinic`。
+⚠️ `dsh-plugin-doctor` 这个名字有多个项目在用。npm 上的裸名 `dsh-plugin-doctor` **不是这个项目**——请始终用带 scope 的 `dsh-checkup`。
 
-⚠️ Several projects share the name `dsh-plugin-doctor`. The bare npm name `dsh-plugin-doctor` is **a different project** — always use the scoped `dsh-clinic`.
+⚠️ Several projects share the name `dsh-plugin-doctor`. The bare npm name `dsh-plugin-doctor` is **a different project** — always use the scoped `dsh-checkup`.
 
 ---
 

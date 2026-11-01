@@ -36,7 +36,7 @@ be broken by your build toolchain.
 Two things in it matter more than they look:
 
 - **The pin must be the scoped name at an exact version**
-  (`dsh-clinic@<version>`). The bare npm name
+  (`dsh-checkup@<version>`). The bare npm name
   `dsh-plugin-doctor` is **a different project**; running it executes someone
   else's package and none of these checks run.
 - **It does not read the exit code.** It greps `R0 ` / `K1 ` on stdout and
@@ -47,7 +47,7 @@ Two things in it matter more than they look:
 ### 2. Add a badge
 
 ```markdown
-[![dsh-doctor R+K](https://img.shields.io/github/actions/workflow/status/<owner>/<repo>/plugin-doctor.yml?branch=main&label=dsh-doctor%20R%2BK)](https://github.com/PerryLink/dsh-clinic/blob/main/SPEC.md)
+[![dsh-doctor R+K](https://img.shields.io/github/actions/workflow/status/<owner>/<repo>/plugin-doctor.yml?branch=main&label=dsh-doctor%20R%2BK)](https://github.com/PerryLink/dsh-checkup/blob/main/SPEC.md)
 ```
 
 Replace `<owner>/<repo>`, and `branch=` if your default branch is not `main`.
@@ -67,7 +67,7 @@ for the same workflow. It makes the same claim (this one is the documented GitHu
 Actions badge form, not separately verified here):
 
 ```markdown
-[![dsh-doctor R+K](https://github.com/<owner>/<repo>/actions/workflows/plugin-doctor.yml/badge.svg)](https://github.com/PerryLink/dsh-clinic/blob/main/SPEC.md)
+[![dsh-doctor R+K](https://github.com/<owner>/<repo>/actions/workflows/plugin-doctor.yml/badge.svg)](https://github.com/PerryLink/dsh-checkup/blob/main/SPEC.md)
 ```
 
 ### 3. Say what you conform to
@@ -117,7 +117,7 @@ human look and never condemns a plugin on its own.
 ### If you think a finding is wrong
 
 That is a defect of this tool, not a fact about your repository. Open an issue at
-[PerryLink/dsh-clinic/issues](https://github.com/PerryLink/dsh-clinic/issues)
+[PerryLink/dsh-checkup/issues](https://github.com/PerryLink/dsh-checkup/issues)
 with the reproduce command and your output. The row gets re-run and corrected
 with the same prominence as the original.
 

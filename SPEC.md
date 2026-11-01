@@ -4,8 +4,8 @@
 |---|---|
 | **Spec version** | `v1` (checkset `R0-R8+K1-K14+D0-D3,D9+CC1-CC5/3`) |
 | **Author / Editor** | **PerryLink** — <https://github.com/PerryLink> |
-| **Canonical source** | <https://github.com/PerryLink/dsh-clinic> |
-| **Reference implementation** | `dsh-clinic` (see `package.json`) |
+| **Canonical source** | <https://github.com/PerryLink/dsh-checkup> |
+| **Reference implementation** | `dsh-checkup` (see `package.json`) |
 | **Status** | Authored specification. Single-maintainer; see [`GOVERNANCE.md`](GOVERNANCE.md). |
 | **Normative text** | This file. When this document and the implementation disagree, that is a defect in one of them — not a licence to read the implementation as the spec. |
 

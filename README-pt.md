@@ -2,20 +2,20 @@
 
 > Release stamp: `0.4.6` (2026-10-04).
 
-> **Nome do pacote.** Este projeto é publicado no npm como **`dsh-clinic`**. O nome simples `dsh-plugin-doctor` pertence a outro projeto não relacionado — nunca execute `npx dsh-plugin-doctor`; instalá-lo não instala este plugin.
+> **Nome do pacote.** Este projeto é publicado no npm como **`dsh-checkup`**. O nome simples `dsh-plugin-doctor` pertence a outro projeto não relacionado — nunca execute `npx dsh-plugin-doctor`; instalá-lo não instala este plugin.
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
-[![npm version](https://img.shields.io/npm/v/%40perrylink%2Fdsh-plugin-doctor)](https://www.npmjs.com/package/dsh-clinic)
-[![npm downloads](https://img.shields.io/npm/dm/%40perrylink%2Fdsh-plugin-doctor)](https://www.npmjs.com/package/dsh-clinic)
+[![npm version](https://img.shields.io/npm/v/%40perrylink%2Fdsh-plugin-doctor)](https://www.npmjs.com/package/dsh-checkup)
+[![npm downloads](https://img.shields.io/npm/dm/%40perrylink%2Fdsh-plugin-doctor)](https://www.npmjs.com/package/dsh-checkup)
 [![Node](https://img.shields.io/badge/node-%5E22.19%20%7C%7C%20%3E%3D24-brightgreen.svg)](#)
-[![CI](https://img.shields.io/github/actions/workflow/status/PerryLink/dsh-clinic/ci.yml?branch=main&label=CI)](https://github.com/PerryLink/dsh-clinic/actions)
-[![dshfind](https://dshfind.com/api/badge/PerryLink/dsh-clinic?metric=downloads&lang=pt)](https://dshfind.com/pt/plugins/PerryLink/dsh-clinic?ref=badge)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/PerryLink/dsh-clinic/badge)](https://api.securityscorecards.dev/projects/github.com/PerryLink/dsh-clinic)
+[![CI](https://img.shields.io/github/actions/workflow/status/PerryLink/dsh-checkup/ci.yml?branch=main&label=CI)](https://github.com/PerryLink/dsh-checkup/actions)
+[![dshfind](https://dshfind.com/api/badge/PerryLink/dsh-checkup?metric=downloads&lang=pt)](https://dshfind.com/pt/plugins/PerryLink/dsh-checkup?ref=badge)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/PerryLink/dsh-checkup/badge)](https://api.securityscorecards.dev/projects/github.com/PerryLink/dsh-checkup)
 
 [English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
 
 ```sh
-dsh plugin --profile <name> add dsh-clinic
+dsh plugin --profile <name> add dsh-checkup
 ```
 
 
@@ -33,17 +33,17 @@ canal de distribuição no workspace (texto completo em `SURVEY.md`).
 ## Instalação (bundle do DSH)
 
 ```sh
-dsh plugin --profile web add github:PerryLink/dsh-clinic
+dsh plugin --profile web add github:PerryLink/dsh-checkup
 ```
 
 `dsh-plugin-doctor` declara `dsh.bundle.patch` → `cordis.patch.yml` no package.json, então ele também pode ser instalado como um bundle do DeepSeek Harness:
 
 ```powershell
 # canal git (main mais recente)
-dsh plugin --profile web add github:PerryLink/dsh-clinic
+dsh plugin --profile web add github:PerryLink/dsh-checkup
 
 # canal npm (versão publicada; use sempre o nome completo com escopo -- o nome puro dsh-plugin-doctor é outro projeto)
-dsh plugin --profile web add dsh-clinic
+dsh plugin --profile web add dsh-checkup
 ```
 
 A linha inserida carrega este pacote sob o contrato padrão de plugin Cordis: a metade host é um módulo ESM simples que exporta `apply(ctx)` (declarando `inject` para os serviços de que precisa). O pacote não traz nenhuma UI de navegador, portanto não há declaração `dsh.client`.
@@ -55,7 +55,7 @@ export function apply(ctx) {
 }
 ```
 
-Desinstalação: `dsh plugin --profile web remove dsh-clinic` (ou apague essa linha do patch do profile). O uso da CLI abaixo não é afetado.
+Desinstalação: `dsh plugin --profile web remove dsh-checkup` (ou apague essa linha do patch do profile). O uso da CLI abaixo não é afetado.
 
 ## ⭐ 如果它帮到了你
 
@@ -76,7 +76,7 @@ Um verificador tudo-em-um de "integridade + saúde em tempo de execução" para 
 
 ## Comparison
 
-![Gráfico comparativo medido do dsh-plugin-doctor](https://raw.githubusercontent.com/PerryLink/dsh-clinic/main/docs/assets/dsh-plugin-doctor-evidence.png)
+![Gráfico comparativo medido do dsh-plugin-doctor](https://raw.githubusercontent.com/PerryLink/dsh-checkup/main/docs/assets/dsh-plugin-doctor-evidence.png)
 
 60 candidates → 20 qualifying plugins · scan dated 2026-09-10 (data/rk-scans.json)
 
@@ -177,9 +177,9 @@ Os aliases não diferenciam maiúsculas de minúsculas, e os nomes completos em 
 
 ## Colisões de nome (importante)
 
-Este repositório é **`dsh-clinic`**, e **não é o mesmo projeto** que outras ferramentas de mesmo nome no ecossistema:
+Este repositório é **`dsh-checkup`**, e **não é o mesmo projeto** que outras ferramentas de mesmo nome no ecossistema:
 
-- O nome npm puro `dsh-plugin-doctor` pertence a **Xrainsmile/DSH-Plugin-Doctor** (um projeto diferente, 0.1.1). Então **nunca rode `npx dsh-plugin-doctor`** — isso executa o pacote de outra pessoa; use sempre o nome completo com escopo `dsh-clinic@<exact version>`.
+- O nome npm puro `dsh-plugin-doctor` pertence a **Xrainsmile/DSH-Plugin-Doctor** (um projeto diferente, 0.1.1). Então **nunca rode `npx dsh-plugin-doctor`** — isso executa o pacote de outra pessoa; use sempre o nome completo com escopo `dsh-checkup@<exact version>`.
 - Dez repositórios do GitHub carregam `dsh-plugin-doctor` no nome (oito deles **exatamente** esse nome), incluindo `zoahdev/dsh-plugin-doctor` (só no GitHub, nunca publicado no npm).
 - O README do `dsh-testkit` aponta `dsh-plugin-doctor` para o repositório zoahdev; isso não tem nada a ver com este aqui.
 
@@ -199,11 +199,11 @@ Em uma linha: **zero dependências, funciona offline (`--only R,K`), e transform
 Usar este selo significa exatamente uma coisa auditável: **o repositório roda o gate estático R+K do dsh-plugin-doctor (16 verificações: R0/R1/R3/R5/R6/R7/R8 + K1–K9) na própria CI, e esse gate está verde no HEAD atual do branch padrão.** Ele **não** é um selo de certificação: sem Scorecard, sem proveniência, sem smoke de instalação. R2 (integridade do tarball) e R4 (contrato de entrada) leem o `lib/` compilado, e compilar a maioria dos repositórios da família exige que `HARNESS_COMMIT` + `gen-aliases` passem — esses dois são cobertos pelo `ci.yml` de cada repositório (gate de build-drift + pack smoke) e ficam deliberadamente fora deste gate.
 
 ```markdown
-[![dsh-doctor](https://raw.githubusercontent.com/PerryLink/dsh-clinic/main/badges/PerryLink__dsh-github.svg)](https://github.com/PerryLink/dsh-clinic#verified-徽章)
+[![dsh-doctor](https://raw.githubusercontent.com/PerryLink/dsh-checkup/main/badges/PerryLink__dsh-github.svg)](https://github.com/PerryLink/dsh-checkup#verified-徽章)
 [![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
 ```
 
-- O registro `data/verified.json` é a única fonte de verdade, atualizado por `.github/workflows/verified.yml` diariamente e a cada push relevante. Uma atualização apenas lê a API do GitHub: ela interpreta a configuração do gate `plugin-doctor.yml` no HEAD de cada repositório (que deve fixar `dsh-clinic@<version>`, usar um argumento `--only` que funcione, e auto-verificar que R0/K1 realmente rodaram), depois confere a conclusão da execução do workflow `plugin-doctor` daquele HEAD. **A CI deste repositório nunca clona, instala ou executa código de terceiros.**
+- O registro `data/verified.json` é a única fonte de verdade, atualizado por `.github/workflows/verified.yml` diariamente e a cada push relevante. Uma atualização apenas lê a API do GitHub: ela interpreta a configuração do gate `plugin-doctor.yml` no HEAD de cada repositório (que deve fixar `dsh-checkup@<version>`, usar um argumento `--only` que funcione, e auto-verificar que R0/K1 realmente rodaram), depois confere a conclusão da execução do workflow `plugin-doctor` daquele HEAD. **A CI deste repositório nunca clona, instala ou executa código de terceiros.**
 - Aparência do selo: a linguagem visual segue os dois selos mais novos do ecossistema (o monoespaçado em maiúsculas + letter-spacing + marca + gradiente do `dsh.directory`, e o bloco de selo do `awesome-dsh-plugin`) — **um segmento esquerdo metálico prata/platina, uma marca de check em escudo, e maiúsculas monoespaçadas em azul-tinta**, com o segmento direito numa **cor de status sólida da convenção do GitHub** (verde/laranja/vermelho/cinza) trazendo uma palavra de status em monoespaçado maiúsculo, e o status ainda expresso por um **ícone desenhado em path** (✓ / ! / ✕ / –) para continuar legível com deficiência de visão de cores. Raio de canto de 5px + traço de 1px; **o traço é obrigatório** — sem ele o segmento esquerdo prata some contra um fundo de README branco.
 - Quatro estados (o texto do valor usa as palavras convencionais do shields / GitHub Actions): `passing` (verde: a execução do HEAD teve sucesso) / `warning` (laranja: o HEAD ainda não rodou, uma execução ainda está na fila, ou falta uma precondição do gate) / `failing` (vermelho: a execução do HEAD falhou, ou a configuração do gate não se sustenta — incluindo um "gate falso" cujo argumento `--only` está duplamente mal codificado) / `no data` (cinza: a consulta à API falhou). O selo é **dinâmico**: assim que deixa de passar ele fica vermelho. O escopo exato de R+K vive nesta seção e no campo `meaning` do registro, não no texto do selo (o selo aponta de volta para cá).
 - Para entrar: abra um PR contra `data/verified-repos.json` adicionando `{ "repo": "<owner>/<name>", "package": "<npm package name>" }`, e adicione `plugin-doctor.yml` ao seu próprio repositório como abaixo; a entrada precisa passar pela auditoria acima.
@@ -213,7 +213,7 @@ Usar este selo significa exatamente uma coisa auditável: **o repositório roda 
       - name: Run dsh-plugin-doctor (static R/K on the committed tree)
         run: |
           set +e
-          out="$(npx --yes dsh-clinic@0.1.6 --repo . --no-smoke --only "R,K" --json /tmp/doctor.json 2>&1)"
+          out="$(npx --yes dsh-checkup@0.1.6 --repo . --no-smoke --only "R,K" --json /tmp/doctor.json 2>&1)"
           set -e
           printf '%s\n' "$out"
           echo "$out" | grep -q 'R0 ' || { echo "::error::doctor ran no R checks"; exit 1; }
@@ -298,11 +298,11 @@ version difference is reported as a note — most skills version independently.
 
 ## Status
 
-Repositório oficial: GitHub `PerryLink/dsh-clinic` (Apache-2.0), npm `dsh-clinic`.
+Repositório oficial: GitHub `PerryLink/dsh-checkup` (Apache-2.0), npm `dsh-checkup`.
 **Versão atual 0.2.0** (a mais nova no npm antes da 0.2.0 era a 0.1.7); veja `CHANGELOG.md`. Uso em CI (**por favor, use os aliases ASCII**):
 
 ```powershell
-npx --yes dsh-clinic@0.2.0 --repo . --no-smoke --only "R,K"
+npx --yes dsh-checkup@0.2.0 --repo . --no-smoke --only "R,K"
 ```
 
 **37 repositórios de plugins** já trazem `.github/workflows/plugin-doctor.yml` (um gate estático somente leitura sobre a árvore commitada → `--only "R,K"` mais a auto-verificação de R0/K1, fixado em `@0.1.6`).
@@ -312,7 +312,7 @@ O pin permanece deliberadamente na 0.1.6: a 0.2.0 **não muda em nada** os crit�
 
 ### Conjuntos de resultados públicos
 
-- [`THIRD-PARTY-RK-SCAN.md`](https://github.com/PerryLink/dsh-clinic/blob/main/THIRD-PARTY-RK-SCAN.md) — a primeira varredura estática R+K de plugins dsh de **terceiros** (não PerryLink): 60 candidatos → 20 plugins que realmente declaram `dsh.bundle.patch` → sob o gate de 16 verificações, **10 passaram / 10 falharam**. Método: clones somente leitura, **zero execução** de código de terceiros, R2/R4 listados à parte e fora do gate; ela inclui os comandos de reprodução, uma correção à metodologia da própria varredura, e um **canal de correção para qualquer repositório citado nela**. Forma legível por máquina: `data/rk-scans.json`.
+- [`THIRD-PARTY-RK-SCAN.md`](https://github.com/PerryLink/dsh-checkup/blob/main/THIRD-PARTY-RK-SCAN.md) — a primeira varredura estática R+K de plugins dsh de **terceiros** (não PerryLink): 60 candidatos → 20 plugins que realmente declaram `dsh.bundle.patch` → sob o gate de 16 verificações, **10 passaram / 10 falharam**. Método: clones somente leitura, **zero execução** de código de terceiros, R2/R4 listados à parte e fora do gate; ela inclui os comandos de reprodução, uma correção à metodologia da própria varredura, e um **canal de correção para qualquer repositório citado nela**. Forma legível por máquina: `data/rk-scans.json`.
   **Não é uma certificação, não é uma nota, e não diz nada sobre a segurança de um plugin**: uma aprovação significa apenas que "as 16 verificações estáticas não reportaram nenhuma falha naquele commit".
 
 ## PerryLink DSH Plugin Family
@@ -381,7 +381,7 @@ Este projeto faz parte da família de plugins do DeepSeek Harness da [PerryLink]
 | **[dsh-permit-report-check](https://github.com/PerryLink/dsh-permit-report-check)** |  |
 | **[dsh-pipeline-check](https://github.com/PerryLink/dsh-pipeline-check)** |  |
 | **[dsh-pleading-draft](https://github.com/PerryLink/dsh-pleading-draft)** |  |
-| **[dsh-plugin-doctor](https://github.com/PerryLink/dsh-clinic)** |  |
+| **[dsh-plugin-doctor](https://github.com/PerryLink/dsh-checkup)** |  |
 | **[dsh-plugin-guide](https://github.com/PerryLink/dsh-plugin-guide)** |  |
 | **[dsh-plugin-kit](https://github.com/PerryLink/dsh-plugin-kit)** |  |
 | **[dsh-plugin-upgrade](https://github.com/PerryLink/dsh-plugin-upgrade)** |  |
