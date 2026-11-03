@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.8.2] - 2026-11-03
+
+### Changed
+
+- Require Node `>=24.9.0`: the smoke path installs and runs a 0.2.2 host, which dropped Node 22.
+
 ## [0.8.1] - 2026-11-03
 
 ### Changed
