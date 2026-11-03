@@ -1,5 +1,3 @@
-> **Merged:** this alias is now part of **[dsh-clinic](https://github.com/PerryLink/dsh-clinic)**. Install `dsh-clinic`; this repository is a pointer/backup.
-
 # dsh-clinic
 
 > **Renamed:** previously `@perrylink/dsh-plugin-doctor`; now **`dsh-clinic`**. The old repository stays as a pointer/backup. New home: https://github.com/PerryLink/dsh-clinic
