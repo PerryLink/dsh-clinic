@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.1] - 2026-11-03
+
+### Changed
+
+- Regenerate `lib/host-surface.data.mjs` against DeepSeek Harness `0.2.2-alpha.3` (dsh-base `0.2.2-alpha.3`): 141 runtime services, 88 events, 97 built-in rows.
+- Update the README host baseline to `dsh-v0.2.2-alpha.3`.
+- Verified: host-surface `--check` passes; `tests/selftest.mjs` 14/14; `tests/compat.mjs` 25/25.
+
 ## [0.8.0] - 2026-11-02
 
 ### Changed

@@ -1,6 +1,6 @@
 {
   "name": "dsh-clinic",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Zero-dependency static + sandbox smoke detector for DeepSeek Harness (dsh) plugins: package-structure gates (R), cordis contract scans (K), keyless-headless sandbox smoke (D), and ecosystem-listing checks (CC).",
   "author": {
     "name": "PerryLink",

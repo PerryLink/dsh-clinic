@@ -90,7 +90,7 @@ An all-in-one "integrity + runtime health" checker for dsh plugins. Zero depende
 
 | Surface | Status |
 |---|---|
-| Harness | DeepSeek Harness `dsh-v0.2.1-alpha.1` (zero-dependency and host-agnostic by design: `package.json` declares no `@deepseek-ai/dsh-*` dependency and no peer range at all, so this repository's `R5`/`R8` skip deliberately instead of passing — see `SELF-CHECK.md`; the line is recorded in `CHANGELOG.md` §0.4.6, "host pins move to `0.2.1-alpha.1`", and the D-group sandbox smoke takes its host from `--dsh`, default the peer floor `0.1.2-rc.1`) |
+| Harness | DeepSeek Harness `dsh-v0.2.2-alpha.3` (zero-dependency and host-agnostic by design: `package.json` declares no `@deepseek-ai/dsh-*` dependency and no peer range at all, so this repository's `R5`/`R8` skip deliberately instead of passing — see `SELF-CHECK.md`; the line is recorded in `CHANGELOG.md` §0.4.6, "host pins move to `0.2.1-alpha.1`", and the D-group sandbox smoke takes its host from `--dsh`, default the peer floor `0.1.2-rc.1`) |
 | Node | `^22.19.0 \|\| >=24.0.0` |
 
 ## Usage
