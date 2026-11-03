@@ -69,7 +69,7 @@
     "type": "git",
     "url": "git+https://github.com/PerryLink/dsh-clinic.git"
   },
-  "homepage": "https://www.npmjs.com/package/dsh-clinic",
+  "homepage": "https://github.com/PerryLink/dsh-clinic#readme",
   "bugs": {
     "url": "https://github.com/PerryLink/dsh-clinic/issues"
   },
