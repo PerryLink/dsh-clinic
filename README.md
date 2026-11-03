@@ -98,7 +98,7 @@ An all-in-one "integrity + runtime health" checker for dsh plugins. Zero depende
 ```powershell
 node doctor.mjs --repo <插件仓路径>            # 全量（含动态冒烟，需网络 + pnpm）
 node doctor.mjs --repo <路径> --no-smoke       # 仅静态 + 清单
-node doctor.mjs --repo <路径> --dsh 0.1.7-alpha.1 # 冒烟宿主版本（默认 npm latest 已发布线）
+node doctor.mjs --repo <路径> --dsh 0.2.2-alpha.3 # 冒烟宿主版本（默认 npm latest 已发布线）
 node doctor.mjs --repo <路径> --only R,K       # 只跑静态两层（推荐用 ASCII 别名）
 node doctor.mjs --repo <路径> --json report.json
 node doctor.mjs --repo <路径> --json -         # JSON 写 stdout（此时抑制人类可读报告）
