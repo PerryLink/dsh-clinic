@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-label="dsh-clinic check pipeline">
+<title>dsh-clinic check pipeline</title>
+<rect width="1200" height="420" rx="18" fill="#0d1117"/>
+<text x="60" y="62" fill="#f0f6fc" font-family="ui-sans-serif,system-ui,sans-serif" font-size="30" font-weight="700">dsh-clinic</text>
+<text x="60" y="94" fill="#8b949e" font-family="ui-monospace,monospace" font-size="16">doctor.mjs --only R,K,D,CC · dsh plugin add dsh-clinic</text>
+<line x1="60" y1="116" x2="1140" y2="116" stroke="#30363d"/>
+<rect x="60" y="150" width="180" height="96" rx="14" fill="#161b22" stroke="#4B67B4" stroke-width="2"/>
+<text x="150" y="190" fill="#f0f6fc" text-anchor="middle" font-family="ui-monospace,monospace" font-size="17" font-weight="700">R0–R8</text>
+<text x="150" y="218" fill="#8b949e" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12">package.json · patch</text>
+<path d="M246 198h33" stroke="#8b949e" stroke-width="3"/>
+<path d="M277 191l10 7-10 7" fill="none" stroke="#8b949e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="285" y="150" width="180" height="96" rx="14" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+<text x="375" y="190" fill="#f0f6fc" text-anchor="middle" font-family="ui-monospace,monospace" font-size="17" font-weight="700">K1–K9</text>
+<text x="375" y="218" fill="#8b949e" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12">ctx.inject · ctx.effect</text>
+<path d="M471 198h33" stroke="#8b949e" stroke-width="3"/>
+<path d="M502 191l10 7-10 7" fill="none" stroke="#8b949e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="510" y="150" width="180" height="96" rx="14" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+<text x="600" y="190" fill="#f0f6fc" text-anchor="middle" font-family="ui-monospace,monospace" font-size="17" font-weight="700">D0–D3,D9</text>
+<text x="600" y="218" fill="#8b949e" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12">npm pack · dsh plugin add</text>
+<path d="M696 198h33" stroke="#8b949e" stroke-width="3"/>
+<path d="M727 191l10 7-10 7" fill="none" stroke="#8b949e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="735" y="150" width="180" height="96" rx="14" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+<text x="825" y="190" fill="#f0f6fc" text-anchor="middle" font-family="ui-monospace,monospace" font-size="17" font-weight="700">CC1–CC5</text>
+<text x="825" y="218" fill="#8b949e" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12">adp-list · catalog</text>
+<path d="M921 198h33" stroke="#8b949e" stroke-width="3"/>
+<path d="M952 191l10 7-10 7" fill="none" stroke="#8b949e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="960" y="150" width="180" height="96" rx="14" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+<text x="1050" y="190" fill="#f0f6fc" text-anchor="middle" font-family="ui-monospace,monospace" font-size="17" font-weight="700">exit 0–6</text>
+<text x="1050" y="218" fill="#8b949e" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12">verdict</text>
+<rect x="60" y="285" width="810" height="52" rx="12" fill="#161b22" stroke="#4B67B4" stroke-width="2"/>
+<text x="465" y="318" fill="#f0f6fc" text-anchor="middle" font-family="ui-monospace,monospace" font-size="14">--only R,K --no-smoke · --json report.json · plugin_doctor · /doctor</text>
+<text x="60" y="378" fill="#8b949e" font-family="ui-monospace,monospace" font-size="13">pass · warn · skip · fail · error · degraded = exit 6 · --format check = PASS/WARN/FAIL 0/1/2</text>
+</svg>
