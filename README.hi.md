@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-clinic-flow-dark.svg">
-  <img src="docs/assets/dsh-clinic-flow-light.svg" width="100%" alt="dsh-clinic जाँच पाइपलाइन: doctor.mjs क्रम से R0–R8 पैकेज संरचना, K1–K9 कॉर्डिस अनुबंध, D0–D3/D9 सैंडबॉक्स स्मोक और CC1–CC5 डायरेक्टरी सूचियाँ चलाता है, और निर्णय निकास कोड 0/1/2/3/4/5/6 में मिलता है">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-clinic-hero-en-dark.webp">
+  <img src="docs/assets/dsh-clinic-hero-en-light.webp" width="100%" alt="dsh-clinic: एक ही रन में DSH प्लगइन का सत्यापन — पैकेज संरचना, कॉर्डिस अनुबंध, सैंडबॉक्स बूट और सूची जाँचें, पाँच स्थितियों और निकास कोड 0–6 में परिणाम">
 </picture>
 
 # dsh-clinic
@@ -49,6 +49,11 @@ dsh plugin --profile <name> add dsh-clinic
 - [`dsh-testkit`](https://github.com/PerryLink/dsh-testkit) का README पुराने नाम को zoahdev के रेपो से जोड़ता है; इससे इस रेपो का कोई संबंध नहीं।
 
 एक पंक्ति में: **शून्य-निर्भरता, ऑफ़लाइन सक्षम (`--only R,K`), और कॉर्डिस v4 अनुबंधों (K1–K9) तथा पाँच पारिस्थितिकी डायरेक्टरी सूचियों (CC1–CC5) को ऐसे CI गेट में बदलता है जिसका निर्णय निकास कोड से पढ़ा जाता है।** («एकमात्र» जैसे दावे नहीं — केवल इतना कि जिन उपकरणों की वास्तव में जाँच की गई, उनमें तुलनीय कुछ नहीं मिला।)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-clinic-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-clinic-flow-v5-light.svg" width="100%" alt="dsh-clinic संरचना (एक फ़नल): पाँच साक्ष्य धाराएँ R/K/D/CC/X एक फ़नल में आती हैं, हर जाँच पाँच स्थितियों में से एक में गिरती है, सबसे खराब स्थिति निर्णय तय करती है और निकास कोड 0–6 मिलते हैं">
+</picture>
 
 ## तीन चरणों में शुरुआत
 
@@ -439,7 +444,7 @@ node scripts/check-release-health.mjs --roster data/verified-repos.json
 
 ### चित्र फिर से बनाना
 
-`docs/assets/dsh-clinic-flow-{light,dark}.svg` [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) से प्रोग्रामेटिक रूप से बनते हैं (Python + Pillow; CJK फ़ॉन्ट न मिलने पर त्रुटि के साथ बंद हो जाता है)। चित्रों में केवल कमांड token हैं (समूह नाम, कमांड, निकास कोड) और पाँचों भाषाएँ इन्हें साझा करती हैं। दोबारा चलाएँ:
+`docs/assets/dsh-clinic-hero-{zh,en}-{light,dark}.webp` और `docs/assets/dsh-clinic-flow-v5-{light,dark}.svg` [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) से प्रोग्रामेटिक रूप से बनते हैं (hero के लिए Pillow, संरचना चित्र के लिए हाथ से लिखा SVG; फ़ॉन्ट न मिलने पर त्रुटि के साथ बंद हो जाता है)। hero zh/en में है; संरचना चित्र में केवल कमांड token हैं (समूह नाम, कमांड, निकास कोड) और पाँचों भाषाएँ इन्हें साझा करती हैं। दोबारा चलाएँ:
 
 ```sh
 python scripts/gen-readme-assets.py

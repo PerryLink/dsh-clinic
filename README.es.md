@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-clinic-flow-dark.svg">
-  <img src="docs/assets/dsh-clinic-flow-light.svg" width="100%" alt="Flujo de comprobación de dsh-clinic: doctor.mjs ejecuta R0–R8 estructura del paquete, K1–K9 contratos cordis, D0–D3/D9 smoke en sandbox y CC1–CC5 listados de directorio, con veredicto en los códigos de salida 0/1/2/3/4/5/6">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-clinic-hero-en-dark.webp">
+  <img src="docs/assets/dsh-clinic-hero-en-light.webp" width="100%" alt="dsh-clinic: acepta un plugin DSH en una sola ejecución — estructura del paquete, contrato cordis, arranque en sandbox y listados, con veredicto en cinco estados y códigos de salida 0–6">
 </picture>
 
 # dsh-clinic
@@ -49,6 +49,11 @@ En 2026-11 este repositorio pasó de **`@perrylink/dsh-plugin-doctor`** a **`dsh
 - El README de [`dsh-testkit`](https://github.com/PerryLink/dsh-testkit) enlaza el nombre antiguo al repo de zoahdev; no tiene relación con este.
 
 En una línea: **sin dependencias, capaz de operar sin conexión (`--only R,K`), y convierte los contratos cordis v4 (K1–K9) y cinco listados de directorio del ecosistema (CC1–CC5) en una puerta de CI cuyo veredicto se lee en el código de salida.** (Sin afirmaciones del tipo «el único»: solo que no apareció nada comparable dentro del conjunto de herramientas realmente examinado.)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-clinic-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-clinic-flow-v5-light.svg" width="100%" alt="Estructura de dsh-clinic (un embudo): cinco fuentes de evidencia R/K/D/CC/X entran en un embudo, cada comprobación cae en uno de cinco estados, el peor estado fija el veredicto y la salida da los códigos de salida 0–6">
+</picture>
 
 ## Instalación en tres pasos
 
@@ -439,7 +444,7 @@ Solo dos formas de portador hacen fallar la comprobación, porque solo dos se af
 
 ### Regenerar las imágenes
 
-`docs/assets/dsh-clinic-flow-{light,dark}.svg` se generan programáticamente con [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow; la ausencia de una fuente CJK aborta con error). Los diagramas solo contienen tokens de comandos (nombres de grupo, comandos, códigos de salida) y los comparten los cinco idiomas. Re-ejecutar:
+`docs/assets/dsh-clinic-hero-{zh,en}-{light,dark}.webp` y `docs/assets/dsh-clinic-flow-v5-{light,dark}.svg` se generan programáticamente con [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Pillow para el hero, SVG escrito a mano para la figura de estructura; la ausencia de una fuente aborta con error). El hero existe en zh/en; la figura de estructura solo contiene tokens de comandos (nombres de grupo, comandos, códigos de salida) y la comparten los cinco idiomas. Re-ejecutar:
 
 ```sh
 python scripts/gen-readme-assets.py

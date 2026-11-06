@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-clinic-flow-dark.svg">
-  <img src="docs/assets/dsh-clinic-flow-light.svg" width="100%" alt="dsh-clinic pipeline: doctor.mjs runs R0–R8 package structure, K1–K9 cordis contracts, D0–D3/D9 sandbox smoke, and CC1–CC5 directory listings, with a verdict carried by exit codes 0/1/2/3/4/5/6">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-clinic-hero-en-dark.webp">
+  <img src="docs/assets/dsh-clinic-hero-en-light.webp" width="100%" alt="dsh-clinic: accept a DSH plugin in one run — package structure, cordis contract, sandbox boot and listing checks, graded into five states and exit codes 0–6">
 </picture>
 
 # dsh-clinic
@@ -49,6 +49,11 @@ In 2026-11 this repository was renamed from **`@perrylink/dsh-plugin-doctor`** t
 - [`dsh-testkit`](https://github.com/PerryLink/dsh-testkit)'s README links the old name to the zoahdev repo; that has nothing to do with this one.
 
 In one line: **zero-dependency, offline-capable (`--only R,K`), and it turns the cordis v4 contracts (K1–K9) and five ecosystem directory listings (CC1–CC5) into a CI gate whose verdict is readable from the exit code.** (No "the only" style claim — merely that nothing comparable appeared within the set of tools actually surveyed.)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-clinic-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-clinic-flow-v5-light.svg" width="100%" alt="dsh-clinic structure (a funnel): five evidence feeds R/K/D/CC/X pour into one funnel, each check lands in one of five states, the worst state sets the verdict, and the spout yields exit codes 0–6">
+</picture>
 
 ## Three-step setup
 
@@ -441,7 +446,7 @@ Only two carrier shapes fail the check, because only two are asserted family-wid
 
 ### Regenerating the images
 
-`docs/assets/dsh-clinic-flow-{light,dark}.svg` are generated programmatically by [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow; a missing CJK font aborts with an error). The diagrams contain command tokens only (group names, commands, exit codes) and are shared by all five languages. Re-run:
+`docs/assets/dsh-clinic-hero-{zh,en}-{light,dark}.webp` and `docs/assets/dsh-clinic-flow-v5-{light,dark}.svg` are generated programmatically by [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Pillow for the hero, hand-written SVG for the structure figure; a missing font aborts with an error). The hero ships in zh/en; the structure figure contains command tokens only (group names, commands, exit codes) and is shared by all five languages. Re-run:
 
 ```sh
 python scripts/gen-readme-assets.py

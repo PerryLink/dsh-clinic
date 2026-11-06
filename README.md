@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-clinic-flow-dark.svg">
-  <img src="docs/assets/dsh-clinic-flow-light.svg" width="100%" alt="dsh-clinic 检查流水线：doctor.mjs 依次跑 R0–R8 包结构、K1–K9 cordis 契约、D0–D3/D9 沙箱冒烟、CC1–CC5 集合站清单，结论落在退出码 0/1/2/3/4/5/6">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-clinic-hero-zh-dark.webp">
+  <img src="docs/assets/dsh-clinic-hero-zh-light.webp" width="100%" alt="dsh-clinic：一次运行验收一个 DSH 插件——包结构、cordis 契约、沙箱冒烟与集合站清单，结论落在五态判定与退出码 0–6">
 </picture>
 
 # dsh-clinic
@@ -49,6 +49,11 @@ dsh plugin --profile <name> add dsh-clinic
 - [`dsh-testkit`](https://github.com/PerryLink/dsh-testkit) 的 README 把旧名链向 zoahdev 的仓，与本仓无关。
 
 一句话定位：**零依赖、可离线（`--only R,K`）、把 cordis v4 契约（K1–K9）与五大集合站清单（CC1–CC5）做成退出码可判读的 CI 门禁。**（“唯一”这类全称不作声称——仅在已核对的工具集合内未见同类。）
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-clinic-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-clinic-flow-v5-light.svg" width="100%" alt="dsh-clinic 结构图（漏斗）：R/K/D/CC/X 五路取证汇入同一漏斗，每项检查落入五态之一，最坏状态决定判定，漏斗口给出退出码 0–6">
+</picture>
 
 ## 三步上手
 
@@ -439,7 +444,7 @@ node scripts/check-release-health.mjs --roster data/verified-repos.json
 
 ### 配图复跑
 
-`docs/assets/dsh-clinic-flow-{light,dark}.svg` 由 [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) 程序化生成（Python + Pillow；CJK 字体探测缺失即报错退出）。图内只放命令 token（分组名、命令、退出码），五语共用。复跑：
+`docs/assets/dsh-clinic-hero-{zh,en}-{light,dark}.webp` 与 `docs/assets/dsh-clinic-flow-v5-{light,dark}.svg` 由 [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) 程序化生成（Pillow 画 hero，手写 SVG 画结构图；字体探测缺失即报错退出）。hero 分 zh/en 两版；结构图内只放命令 token（分组名、命令、退出码），五语共用。复跑：
 
 ```sh
 python scripts/gen-readme-assets.py
