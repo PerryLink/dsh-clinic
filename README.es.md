@@ -35,7 +35,7 @@ dsh plugin --profile <name> add dsh-clinic
 
 `dsh-clinic` divide «¿se puede instalar este plugin, puede arrancar, lo rechazará un directorio?» en cuatro capas legibles: **R estructura del paquete → K contratos cordis → D smoke en sandbox → CC listados de directorio**. R y K solo leen el árbol confirmado —sin instalar dependencias ni usar la red—; D ejecuta de verdad `npm pack` y arranca un perfil sin credenciales en un sandbox de un solo uso hasta la petición al modelo; CC contrasta las restricciones reales de cinco directorios/registros del ecosistema. Una ejecución produce un veredicto de seis estados (pass / warn / info / skip / fail / error) y siete códigos de salida, así que la CI puede ramificar por el código.
 
-Los criterios no son improvisados: vienen de tres líneas de investigación de primera mano fechadas el 2026-09-07 —la documentación y el código de deepseek-harness, los contratos de código de cordiverse/cordis y un inventario de todos los canales de distribución del espacio de trabajo (texto completo y cada cita en [`SURVEY.md`](SURVEY.md))—. No sustituye a las pruebas ni es una auditoría de seguridad: convierte lo que puede juzgarse estáticamente en una puerta reproducible.
+Los criterios no son improvisados: vienen de tres líneas de investigación de primera mano fechadas el 2026-11-18 —la documentación y el código de deepseek-harness, los contratos de código de cordiverse/cordis y un inventario de todos los canales de distribución del espacio de trabajo (texto completo y cada cita en [`SURVEY.md`](SURVEY.md))—. No sustituye a las pruebas ni es una auditoría de seguridad: convierte lo que puede juzgarse estáticamente en una puerta reproducible.
 
 **📖 Base de conocimiento del ecosistema** (datos medidos, no marketing): [guía de desarrollo · datos de selección · criterios de mantenimiento](https://perrylink.github.io/dsh-plugin-guide/).
 
@@ -358,7 +358,7 @@ Porque es otro proyecto. Este repositorio pasó de `@perrylink/dsh-plugin-doctor
 
 | Superficie | Estado |
 |---|---|
-| Harness | DeepSeek Harness `dsh-v0.2.2-alpha.3` (línea base actualizada el 2026-11-03; sin dependencias y ágil respecto al host por diseño: `package.json` no declara ninguna dependencia `@deepseek-ai/dsh-*` ni rango de peers, así que las comprobaciones `R5`/`R8` de este repositorio se omiten a propósito en vez de pasar — véase `SELF-CHECK.md`; el registro de esta línea está en `CHANGELOG.md` §0.4.6, «host pins move to `0.2.1-alpha.1`», y el smoke de sandbox del grupo D toma su host de `--dsh`, por defecto el suelo de peers `0.1.2-rc.1`) |
+| Harness | DeepSeek Harness `dsh-v0.2.2-rc.4` (línea base actualizada el 2026-11-18; sin dependencias y ágil respecto al host por diseño: `package.json` no declara ninguna dependencia `@deepseek-ai/dsh-*` ni rango de peers, así que las comprobaciones `R5`/`R8` de este repositorio se omiten a propósito en vez de pasar — véase `SELF-CHECK.md`; el registro de esta línea está en `CHANGELOG.md` §0.4.6, «host pins move to `0.2.1-alpha.1`», y el smoke de sandbox del grupo D toma su host de `--dsh`, por defecto el suelo de peers `0.1.2-rc.1`) |
 | Node | `>=24.9.0` |
 
 ## Ecosistema y calidad

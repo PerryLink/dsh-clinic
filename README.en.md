@@ -35,7 +35,7 @@ dsh plugin --profile <name> add dsh-clinic
 
 `dsh-clinic` splits "can this plugin be installed, can it boot, will a directory reject it" into four readable layers: **R package structure → K cordis contracts → D sandbox smoke → CC directory listings**. R and K read only the committed tree — no dependency install, no network; D really runs `npm pack` and boots a keyless profile in a one-shot sandbox up to the model request; CC checks the real constraints of five ecosystem directories/registries. One run yields a six-state verdict (pass / warn / info / skip / fail / error) and seven exit codes, so CI can branch on the code.
 
-The criteria are not improvised: they come from three first-hand research tracks dated 2026-09-07 — the deepseek-harness docs and source, the cordiverse/cordis source contracts, and an inventory of every distribution channel in the workspace (full text and every citation in [`SURVEY.md`](SURVEY.md)). It does not replace tests and is not a security audit: it turns what can be judged statically into a reproducible gate.
+The criteria are not improvised: they come from three first-hand research tracks dated 2026-11-18 — the deepseek-harness docs and source, the cordiverse/cordis source contracts, and an inventory of every distribution channel in the workspace (full text and every citation in [`SURVEY.md`](SURVEY.md)). It does not replace tests and is not a security audit: it turns what can be judged statically into a reproducible gate.
 
 **📖 Ecosystem knowledge base** (measured data, not marketing): [plugin development guide · plugin-selection data · maintenance criteria](https://perrylink.github.io/dsh-plugin-guide/).
 
@@ -360,7 +360,7 @@ Because that is a different project. This repository was renamed from `@perrylin
 
 | Surface | Status |
 |---|---|
-| Harness | DeepSeek Harness `dsh-v0.2.2-alpha.3` (baseline updated 2026-11-03; zero-dependency and host-agnostic by design: `package.json` declares no `@deepseek-ai/dsh-*` dependency and no peer range at all, so this repository's `R5`/`R8` skip deliberately instead of passing — see `SELF-CHECK.md`; the line is recorded in `CHANGELOG.md` §0.4.6, "host pins move to `0.2.1-alpha.1`", and the D-group sandbox smoke takes its host from `--dsh`, default the peer floor `0.1.2-rc.1`) |
+| Harness | DeepSeek Harness `dsh-v0.2.2-rc.4` (baseline updated 2026-11-18; zero-dependency and host-agnostic by design: `package.json` declares no `@deepseek-ai/dsh-*` dependency and no peer range at all, so this repository's `R5`/`R8` skip deliberately instead of passing — see `SELF-CHECK.md`; the line is recorded in `CHANGELOG.md` §0.4.6, "host pins move to `0.2.1-alpha.1`", and the D-group sandbox smoke takes its host from `--dsh`, default the peer floor `0.1.2-rc.1`) |
 | Node | `>=24.9.0` |
 
 ## Ecosystem & quality
