@@ -463,7 +463,7 @@ Este repositório não tem dados de benchmark, então nenhum gráfico de barras 
 
 ## Família e agradecimentos
 
-Este projeto faz parte da família de plugins do DeepSeek Harness da [PerryLink](https://github.com/PerryLink) (95 plugins, todos Apache-2.0). Se ele for útil, **dê uma estrela**: isso não desbloqueia nada, mas ajuda a próxima pessoa a encontrá-lo.
+Este projeto faz parte da família de plugins do DeepSeek Harness da [PerryLink](https://github.com/PerryLink) (99 plugins, todos Apache-2.0). Se ele for útil, **dê uma estrela**: isso não desbloqueia nada, mas ajuda a próxima pessoa a encontrá-lo.
 
 ### Autoria dos critérios
 

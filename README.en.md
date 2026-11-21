@@ -464,7 +464,7 @@ This repository has no benchmark data, so no evidence bar chart is generated; th
 
 ## Family & thanks
 
-This project is part of the DeepSeek Harness plugin family from [PerryLink](https://github.com/PerryLink) (95 plugins, all Apache-2.0). If it is useful, **a star helps the next person find it** — nothing is gated behind it.
+This project is part of the DeepSeek Harness plugin family from [PerryLink](https://github.com/PerryLink) (99 plugins, all Apache-2.0). If it is useful, **a star helps the next person find it** — nothing is gated behind it.
 
 ### Authorship of the criteria
 
