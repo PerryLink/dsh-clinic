@@ -176,6 +176,10 @@ Aliases are case-insensitive, and the Chinese full names still work. **Use the a
 
 ### Examples
 
+![dsh-clinic: real terminal run](docs/assets/dsh-plugin-doctor-demo.gif)
+
+*Animated replay of a real run recorded in this repository.*
+
 **Detailed example** — command `node doctor.mjs --repo . --no-smoke --only R,K`, output:
 
 ```text

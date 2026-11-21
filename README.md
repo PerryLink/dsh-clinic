@@ -33,6 +33,10 @@ dsh plugin --profile <name> add dsh-clinic
 
 ## 它是什么
 
+![dsh-clinic 真实终端运行](docs/assets/dsh-plugin-doctor-demo.gif)
+
+*本仓库一次真实运行的动图回放。*
+
 `dsh-clinic` 把「这个插件能不能装、能不能起、进了目录站会不会被拒」拆成四层可判读的检查：**R 包结构 → K cordis 契约 → D 沙箱冒烟 → CC 集合站清单**。R 与 K 只读已提交的树，不需要装依赖、不需要联网；D 会在 `%TEMP%` 的一次性沙箱里真正 `npm pack` 并用无钥 profile 启动到模型请求；CC 对照生态里五个目录/注册表的真实约束。一次运行给出六态结论（pass / warn / info / skip / fail / error）与七个退出码，CI 可以直接按码分流。
 
 判据不是拍脑袋写的：全部来自 2026-11-18 三路一手调研——deepseek-harness 的文档与源码、cordiverse/cordis 的源码契约、工作区全渠道存量盘点（全文与每个判据的出处见 [`SURVEY.md`](SURVEY.md)）。它不替代测试，也不构成安全审计：它把可静态判定的部分变成可复现的门禁。
