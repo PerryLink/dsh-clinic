@@ -403,7 +403,7 @@ lib/checks-runtime.mjs   X होस्ट अनुबंध जाँचें
 lib/checks-smoke.mjs     डायनामिक · सैंडबॉक्स स्मोक D0–D3, D9
 lib/checks-collections.mjs  इकोसिस्टम · डायरेक्टरी सूचियाँ CC1–CC5
 tests/selftest.mjs       14 वास्तविक-CLI सेल्फ-टेस्ट (मौजूदा 7 exit-code अनुबंध केस बाइट-दर-बाइट समान, और 7 नए degraded/उपयोग-गार्ड केस)
-tests/contract.mjs       31 अनुबंध परीक्षण (मौजूदा 37-रेपो CI जिन 5 observables पर टिकी है उन्हें फ़्रीज़ करते हैं)
+tests/contract.mjs       58 अनुबंध परीक्षण (मौजूदा 37-रेपो CI जिन 5 observables पर टिकी है उन्हें फ़्रीज़ करते हैं)
 scripts/check-readme-sync.mjs  पाँच-भाषा README गेट (मोड A: चीनी मुख्य + अंग्रेज़ी)
 scripts/verify.mjs       सत्यापित रजिस्ट्री और बैज ताज़ा करना (हर रेपो के गेट के ऑडिट के लिए GitHub API पढ़ता है)
 scripts/badge.mjs        सत्यापित SVG रेंडरिंग

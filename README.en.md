@@ -404,7 +404,7 @@ lib/checks-runtime.mjs   X host-contract checks
 lib/checks-smoke.mjs     dynamic · sandbox smoke D0–D3, D9
 lib/checks-collections.mjs  ecosystem · directory listings CC1–CC5
 tests/selftest.mjs       14 real-CLI self-tests (the 7 existing exit-code-contract cases byte-identical, plus 7 new degraded/usage-guard cases)
-tests/contract.mjs       31 contract tests (freezing the 5 observables the existing 37-repo CI depends on)
+tests/contract.mjs       58 contract tests (freezing the 5 observables the existing 37-repo CI depends on)
 scripts/check-readme-sync.mjs  five-language README gate (A mode: Chinese main + English)
 scripts/verify.mjs       verified registry and badge refresh (reads the GitHub API to audit each repo's gate)
 scripts/badge.mjs        verified SVG rendering

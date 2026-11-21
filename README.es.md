@@ -403,7 +403,7 @@ lib/checks-runtime.mjs   comprobaciones X del contrato del anfitrión
 lib/checks-smoke.mjs     dinámico · smoke en sandbox D0–D3, D9
 lib/checks-collections.mjs  ecosistema · listados de directorio CC1–CC5
 tests/selftest.mjs       14 autopruebas de CLI real (los 7 casos existentes del contrato de exit code idénticos byte a byte, más 7 casos nuevos de degradación/guarda de uso)
-tests/contract.mjs       31 pruebas de contrato (congelan los 5 observables de los que depende la CI de los 37 repos existentes)
+tests/contract.mjs       58 pruebas de contrato (congelan los 5 observables de los que depende la CI de los 37 repos existentes)
 scripts/check-readme-sync.mjs  puerta de README en cinco idiomas (modo A: principal chino + inglés)
 scripts/verify.mjs       refresco del registro verificado y de las insignias (lee la API de GitHub para auditar la puerta de cada repo)
 scripts/badge.mjs        renderizado SVG verificado

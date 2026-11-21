@@ -402,7 +402,7 @@ lib/checks-runtime.mjs   X 组宿主契约检查
 lib/checks-smoke.mjs     动态·沙箱冒烟 D0–D3、D9
 lib/checks-collections.mjs  生态·集合站清单 CC1–CC5
 tests/selftest.mjs       14 例真实 CLI 自检（既有 7 例退出码契约逐字不变 + 新增降级/用法守卫 7 例）
-tests/contract.mjs       31 项契约测试（冻结既有 37 仓 CI 依赖的 5 个可观测量）
+tests/contract.mjs       58 项契约测试（冻结既有 37 仓 CI 依赖的 5 个可观测量）
 scripts/check-readme-sync.mjs  五语 README 门禁（A 模式：中文主版 + 英文版）
 scripts/verify.mjs       verified 注册表与徽章刷新（只读 GitHub API 审计各仓门禁）
 scripts/badge.mjs        verified SVG 渲染
