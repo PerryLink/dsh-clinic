@@ -176,7 +176,7 @@ Aliases are case-insensitive, and the Chinese full names still work. **Use the a
 
 ### Examples
 
-![dsh-clinic: real terminal run](docs/assets/dsh-plugin-doctor-demo.gif)
+![dsh-clinic: real terminal run](docs/assets/dsh-clinic-demo.gif)
 
 *Animated replay of a real run recorded in this repository.*
 

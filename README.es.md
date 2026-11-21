@@ -55,7 +55,7 @@ En una línea: **sin dependencias, capaz de operar sin conexión (`--only R,K`),
   <img src="docs/assets/dsh-clinic-flow-v5-light.svg" width="100%" alt="Estructura de dsh-clinic (un embudo): cinco fuentes de evidencia R/K/D/CC/X entran en un embudo, cada comprobación cae en uno de seis estados, el peor estado fija el veredicto y la salida da los códigos de salida 0–6">
 </picture>
 
-![dsh-clinic: ejecución real de terminal](docs/assets/dsh-plugin-doctor-demo.gif)
+![dsh-clinic: ejecución real de terminal](docs/assets/dsh-clinic-demo.gif)
 
 *Repetición animada de una ejecución real registrada en este repositorio.*
 

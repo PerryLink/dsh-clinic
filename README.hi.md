@@ -55,7 +55,7 @@ dsh plugin --profile <name> add dsh-clinic
   <img src="docs/assets/dsh-clinic-flow-v5-light.svg" width="100%" alt="dsh-clinic संरचना (एक फ़नल): पाँच साक्ष्य धाराएँ R/K/D/CC/X एक फ़नल में आती हैं, हर जाँच छह स्थितियों में से एक में गिरती है, सबसे खराब स्थिति निर्णय तय करती है और निकास कोड 0–6 मिलते हैं">
 </picture>
 
-![dsh-clinic का असली टर्मिनल रन](docs/assets/dsh-plugin-doctor-demo.gif)
+![dsh-clinic का असली टर्मिनल रन](docs/assets/dsh-clinic-demo.gif)
 
 *इस रिपॉज़िटरी में दर्ज असली रन का एनिमेटेड रीप्ले।*
 

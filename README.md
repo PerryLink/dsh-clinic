@@ -33,7 +33,7 @@ dsh plugin --profile <name> add dsh-clinic
 
 ## 它是什么
 
-![dsh-clinic 真实终端运行](docs/assets/dsh-plugin-doctor-demo.gif)
+![dsh-clinic 真实终端运行](docs/assets/dsh-clinic-demo.gif)
 
 *本仓库一次真实运行的动图回放。*
 

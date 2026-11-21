@@ -55,7 +55,7 @@ Em uma linha: **sem dependências, capaz de operar offline (`--only R,K`), e tra
   <img src="docs/assets/dsh-clinic-flow-v5-light.svg" width="100%" alt="Estrutura do dsh-clinic (um funil): cinco fontes de evidência R/K/D/CC/X entram em um funil, cada verificação cai em um de seis estados, o pior estado define o veredicto e a saída fornece os códigos de saída 0–6">
 </picture>
 
-![dsh-clinic: execução real de terminal](docs/assets/dsh-plugin-doctor-demo.gif)
+![dsh-clinic: execução real de terminal](docs/assets/dsh-clinic-demo.gif)
 
 *Repetição animada de uma execução real registrada neste repositório.*
 
